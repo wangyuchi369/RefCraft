@@ -1,0 +1,197 @@
+[
+ {
+  "task": 280,
+  "label": "A",
+  "pool": "523",
+  "source": {
+   "source_id": "eventre/index",
+   "source": "d3_openlicense",
+   "pool_sample_id": 523,
+   "source_metadata_sha256": "614cd251074d0418c25b30d6181555af528dd369c21d31aeadd7b8d30906af74"
+  },
+  "released_frame": "opensource/data/references/280/screenshot_1.png",
+  "sha256": "3a1da507b22d3ee7a370483e02943fe867f1857a434424e4a340aa337b7af768",
+  "reference_role": "Palette & atmosphere",
+  "directive": "copy"
+ },
+ {
+  "task": 280,
+  "label": "B",
+  "pool": "466",
+  "source": {
+   "source_id": "95",
+   "source": "eval_300",
+   "pool_sample_id": 466,
+   "source_metadata_sha256": "4d040f9b7cd6751f237ce13ea35974cd6b23503df7c3d8e462910417cae3de31"
+  },
+  "released_frame": "opensource/data/references/280/screenshot_5.png",
+  "sha256": "95a7943a0294fb8a55ef1ac64655d19267f699bcc70b15a12e2b2c718d58a5c6",
+  "reference_role": "Cards & controls",
+  "directive": "copy"
+ },
+ {
+  "task": 280,
+  "label": "C",
+  "pool": "429",
+  "source": {
+   "source_id": "230",
+   "source": "synthetic",
+   "pool_sample_id": 429,
+   "source_metadata_sha256": "51a496ba41afe18b4b1435900a80d52811a26a4b22979adc330c0ebdedb0a704"
+  },
+  "released_frame": "opensource/data/references/280/screenshot_9.png",
+  "sha256": "bdaea514a448a27cfef367b847f71fe099980e9d7c43fccb125acb0140fe0fa3",
+  "reference_role": "Full-screen layout",
+  "directive": "copy"
+ },
+ {
+  "task": 35,
+  "label": "A",
+  "pool": "419",
+  "source": {
+   "source_id": "7",
+   "source": "eval_300",
+   "pool_sample_id": 419,
+   "source_metadata_sha256": "52a8cb82e63d8fabc6623226c4945f041b62bac7fd57c74cb5304afb7e2a39da"
+  },
+  "released_frame": "opensource/data/references/35/screenshot_1.png",
+  "sha256": "19fd24598e2cc0700b99aca09979deb21b24095871f4923b93de55bcb8221959",
+  "reference_role": "Palette & components",
+  "directive": "copy"
+ },
+ {
+  "task": 35,
+  "label": "B",
+  "pool": "68",
+  "source": {
+   "source_id": "d1nat-004",
+   "source": "d1_antiprior_natural",
+   "pool_sample_id": 68,
+   "source_metadata_sha256": "5b54ee6eeb00b64340a016b11e84bd2d53bba8930d968581f1e7196e31f660ba"
+  },
+  "released_frame": "opensource/data/references/35/screenshot_7.png",
+  "sha256": "d6d88ada89cf5bed6782f2f8509350562c7d20c8ae1d6d320d239ef07c75ef91",
+  "reference_role": "Dense technical grid",
+  "directive": "copy"
+ },
+ {
+  "task": 125,
+  "label": "A",
+  "pool": "522",
+  "source": {
+   "source_id": "influencer/index",
+   "source": "d3_openlicense",
+   "pool_sample_id": 522,
+   "source_metadata_sha256": "eff61c655a65b5c5dba8f0fdcbe1a1c5c39eae771d4cf3d48afab98f372bf184"
+  },
+  "released_frame": "opensource/data/references/125/screenshot_1.png",
+  "sha256": "0e92e234f04ee1792990f40b63f4e89ab1fceef82130da8c2989bd4407e0a6b1",
+  "reference_role": "Asymmetric layout & grid",
+  "directive": "copy"
+ },
+ {
+  "task": 125,
+  "label": "B",
+  "pool": "410",
+  "source": {
+   "source_id": "d1nat-057",
+   "source": "d1_antiprior_natural",
+   "pool_sample_id": 410,
+   "source_metadata_sha256": "ec212fb4a45647b266602758adbc502301130d3ac26e94b407fcdef9751bd96c"
+  },
+  "released_frame": "opensource/data/references/125/screenshot_4.png",
+  "sha256": "802b56ce494bc5e44ad0d58ddc68b3f0f618c540d98ed2c7bcceda6cb829bca8",
+  "reference_role": "Dark palette & accents",
+  "directive": "copy"
+ },
+ {
+  "task": 125,
+  "label": "C",
+  "pool": "745",
+  "source": {
+   "source_id": "small-apps/team",
+   "source": "d3_openlicense",
+   "pool_sample_id": 745,
+   "source_metadata_sha256": "e7c8b02eb6cab028fccd8a39c773f211d8ba4b7a33478a6fe57df803e602643b"
+  },
+  "released_frame": "opensource/data/references/125/screenshot_7.png",
+  "sha256": "02730ad4fef8d0e60413c32998840173fee77f6606f26246d93c48e6a0f37c82",
+  "reference_role": "Avoid thin typography",
+  "directive": "invert"
+ },
+ {
+  "task": 125,
+  "label": "D",
+  "pool": "481",
+  "source": {
+   "source_id": "7",
+   "source": "synthetic",
+   "pool_sample_id": 481,
+   "source_metadata_sha256": "11e69d8173dec4ca4fbe6dc2540a4a586741bd19a1c09c264e6718cf805de79c"
+  },
+  "released_frame": "opensource/data/references/125/screenshot_10.png",
+  "sha256": "fbf3631824cb06efce161ccb7d1f9e9dbc8c1b291d8c6e605c73787e4fd25f96",
+  "reference_role": "Rounded cards & pills",
+  "directive": "copy"
+ },
+ {
+  "task": 125,
+  "label": "E",
+  "pool": "38",
+  "source": {
+   "source_id": "4",
+   "source": "synthetic",
+   "pool_sample_id": 38,
+   "source_metadata_sha256": "9200bb1491936f78101486dec381059898969c0a123f7009057c383c9d92c413"
+  },
+  "released_frame": "opensource/data/references/125/screenshot_13.png",
+  "sha256": "ccb651c885cffb71ef4cc2a2071aef6582ac424a2140cc825aa4da9888e5c8cb",
+  "reference_role": "Avoid extreme type contrast",
+  "directive": "invert"
+ },
+ {
+  "task": 273,
+  "label": "A",
+  "pool": "591",
+  "source": {
+   "source_id": "educenter/events",
+   "source": "d3_openlicense",
+   "pool_sample_id": 591,
+   "source_metadata_sha256": "1fc272c804a8b76ff71a213c049376f7ad085ec5fb7a84487088776e0ababac2"
+  },
+  "released_frame": "opensource/data/references/273/screenshot_1.png",
+  "sha256": "b87eed7f5bf484298d66af011758d00e267080f3cac3b0ecca8b67b2c6d0c8f1",
+  "reference_role": "Badges & form controls",
+  "directive": "copy"
+ },
+ {
+  "task": 273,
+  "label": "B",
+  "pool": "64",
+  "source": {
+   "source_id": "212",
+   "source": "eval_300",
+   "pool_sample_id": 64,
+   "source_metadata_sha256": "e66120e66948b971ff2559abf72466504f85445ad22a26d699c9ae78e18ccc99"
+  },
+  "released_frame": "opensource/data/references/273/screenshot_5.png",
+  "sha256": "7d8189679f889b297d8ac96c3e1cec9fcb8c60c66196c02c4ea17e2e64497e31",
+  "reference_role": "Compact grid & code block",
+  "directive": "copy"
+ },
+ {
+  "task": 273,
+  "label": "C",
+  "pool": "1",
+  "source": {
+   "source_id": "d1nat-083",
+   "source": "d1_antiprior_natural",
+   "pool_sample_id": 1,
+   "source_metadata_sha256": "0788e05330b2ffd2f5e7b54122564d05f246fd39043717f379093d9feaed140d"
+  },
+  "released_frame": "opensource/data/references/273/screenshot_9.png",
+  "sha256": "635bb53ea335344fcbb427a097caafcfda26e450b3bb55bc3e1cfd6435e22c7d",
+  "reference_role": "Bold typography",
+  "directive": "copy"
+ }
+]

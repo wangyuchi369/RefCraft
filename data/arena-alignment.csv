@@ -1,0 +1,8 @@
+model,refcraft_overall,arena_model,arena_display_rank,arena_score,refcraft_common_rank,arena_common_rank
+GPT-6 Astra,52.12,gpt-6-astra-max,1,1733,1,1
+Qwen3.8-Max,48.95,qwen3.8-max,7,1618,2,3
+Grok 4.6,48.83,grok-4.6-high,9,1596,3,4
+Kimi K3,47.55,kimi-k3-max,12,1579,4,5
+Claude Fable 5,44.61,claude-fable-5-high,6,1623,5,2
+Seed2.1 Pro,32.06,seed-2.1-pro-preview,27,1504,6,6
+Gemini 3.1 Pro,19.01,gemini-3.1-pro-preview,32,1478,7,7

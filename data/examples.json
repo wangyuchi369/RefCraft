@@ -1,0 +1,327 @@
+[
+ {
+  "id": 280,
+  "sourceId": 470,
+  "title": "Air quality command center",
+  "language": "en",
+  "category": "Data visualization",
+  "summary": "Combine an event page’s palette, a podcast app’s controls, and a graphing tool’s full-screen layout into an air-quality interface.",
+  "query": "I am putting together a real-time air quality monitoring interface for a regional public health initiative. As a data analyst, I need the environmental metrics to be absolutely front and center, highly accurate, and easy to parse without forcing users to dig through endless navigation menus. The core of this project is a live, interactive geographic visualization of AQI, PM2.5, sulfur dioxide, and other critical pollutant levels. We are primarily building this utility for a middle-aged and older demographic who check these metrics daily before their morning exercises, so readability and clear numerical presentation are my absolute top priorities. I still want the whole experience to feel advanced and technologically forward, like a modern smart-city command center, but it must remain accessible. I have a very specific requirement for the type: I want all the body text and data labels to use a classic serif face with elegant thin-thick stroke contrasts. It provides a level of traditional readability that our older users appreciate and trust, while looking surprisingly sharp and authoritative on modern high-resolution displays.\n\nFor the actual structure of the interface, I was looking at that full-screen graphing tool you can see in the final set of images. I really like how that is blocked out, and I want to take the exact same approach here. The entire browser viewport should just be the interactive map acting as our main grid. Please do not box it in with margins or heavy headers. Instead of a math legend, we will have our AQI color scale and summary metrics floating as a distinct block in the top left corner of the map. Then, down at the bottom of the screen, I want a fixed, docked control panel that spans the width of the window, just like the slider console in that graph example. This bottom area will house our complex interactions: an interactive time-scrubber to watch historical pollution clouds moving across the region, and multi-select toggles for switching between the different pollutant data layers.\n\nTo make this highly legible, I want to pull the colors directly from that first set of screenshots with the conference speaker schedules. Give me that exact pure white base for the main interface panels and cards, and use that deep purple-blue photographic tone for the underlying base map styling or empty states. For any interactive elements, warning thresholds on the map, or active filter toggles in the bottom console, use that striking bright orange. It highlights exactly what the user needs to see immediately. Now, for the physical shapes of these panels and controls, I actually want you to look at the dark media platform in the middle screenshots. I want our floating legend and the bottom console to use those exact small block treatments. Give them those very pronounced rounded corners and subtle bright borders. The filtering buttons in our bottom control panel should be those large, highly rounded capsule shapes, maybe using semi-transparent dark backgrounds for inactive states and solid bright colors for active ones, exactly as seen on those media cards.\n\nEven though we are building a high-tech map with rounded floating elements, I want the atmosphere of the site to carry the exact feeling of that white and orange event page. It should not feel like a casual media app or an academic research tool; it needs to project that formal, practical, and highly active business environment. It should feel like a serious, pragmatic public utility where the numbers are authoritative and ready to be acted upon. As users interact with the time slider in the bottom console, the map should smoothly animate the pollution heatmaps transitioning over time, keeping the stateful views fluid. The data needs to feel alive but grounded in absolute precision, with clear numerical tooltips popping up instantly as you hover over different city districts on the map.",
+  "referenceCount": 3,
+  "references": [
+   {
+    "src": "assets/task-280-ref-a.webp",
+    "caption": "Palette & atmosphere",
+    "label": "A",
+    "directive": "copy",
+    "alt": "Reference A for Task 280: Palette & atmosphere"
+   },
+   {
+    "src": "assets/task-280-ref-b.webp",
+    "caption": "Cards & controls",
+    "label": "B",
+    "directive": "copy",
+    "alt": "Reference B for Task 280: Cards & controls"
+   },
+   {
+    "src": "assets/task-280-ref-c.webp",
+    "caption": "Full-screen layout",
+    "label": "C",
+    "directive": "copy",
+    "alt": "Reference C for Task 280: Full-screen layout"
+   }
+  ],
+  "output": {
+   "src": "assets/task-280-output.webp",
+   "caption": "GPT-6 Astra · final artifact from a recorded OpenCode rerun",
+   "model": "GPT-6 Astra",
+   "alt": "Generated webpage for Task 280: Air quality command center",
+   "note": "A replayed screenshot of the final artifact in the recorded air-quality case. This example is separate from the frozen leaderboard run."
+  },
+  "tags": [
+   "3 references",
+   "Cross-reference composition",
+   "Stateful views"
+  ],
+  "directives": [
+   {
+    "aspect": "Palette",
+    "source": "A",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Atmosphere",
+    "source": "A",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Components",
+    "source": "B",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Layout",
+    "source": "C",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Typography",
+    "source": null,
+    "mode": "Specify"
+   }
+  ],
+  "score": {
+   "overall": 79.56989247311827,
+   "b": 79.56989247311827,
+   "c": 100.0,
+   "r": 100.0,
+   "source": "Recorded rerun",
+   "kind": "rerun",
+   "note": "Separately evaluated OpenCode rerun; excluded from the frozen leaderboard.",
+   "htmlSha256": "81a7d4e60f53cb380b89a2e38f7c29fd0b1fd5f6dcbf291a0d3386b618c26366"
+  }
+ },
+ {
+  "id": 35,
+  "sourceId": 56,
+  "title": "A bilingual seismic observatory",
+  "language": "zh",
+  "category": "Data visualization",
+  "summary": "Pair a marketing page’s vivid colors and rounded controls with a dense technical grid, then add bilingual earthquake queries and a linked map.",
+  "query": "**概述**\n我们是一个专注少儿防灾减灾科普的社区公益组织。本期任务是开发一个“地震记录查询页”，专门面向小学生群体，让他们能亲自动手查阅近期的地质活动数据。项目诉求是既要信息呈现清楚直接，又要带有一点小小地质学家的严肃探索氛围。同时为了便于海外校际交流，页面必须配备中英双语无缝切换功能。\n\n**页面结构**\n为了让孩子们的视线足够聚焦，首屏必须在一屏内看完，绝对不允许纵向或横向滚动。页面需包含以下几个区块：\n- 顶部控制台：显示醒目的系统标题、动态时钟以及双语切换开关。\n- 筛选表单区：提供简单的下拉选项，让孩子们选择“上周/本月”时间段和“震级范围”。\n- 数据网格区：实时陈列查询到的地震列表（包含时间、经纬度、震级），紧贴着放一个简易的震中定位缩略图。\n- 科普提示区：一句话的防震避险小提示，配一个“我记住了”的确认反馈区域。\n\n**视觉细节**\n为了营造科学监测终端的氛围，整个页面的大骨架要采用后面那套黑白数据页的区块划分法：全页面被极细的黑色实线纵横切割成类似表格的严密网格，各种数据和控制项高密度地填入这些线框区块内，几乎不留多余的留白。\n\n在色彩方面，不要那种沉闷的黑白，而是要用前面那几张蓝底落地页里的色彩搭配：以大面积的白色为基础底色，关键区域使用那种极高饱和度、高对比度的鲜艳蓝色，同时用亮橙色和鲜绿色作为按钮和高亮警告的强调色。\n\n落到具体的微观区块上，里面的各种信息块也要用前面那套蓝底页面里的做法，也就是由带有圆角和轻微浅色投影的白色卡片组成；表单的提交和确认按钮，一律做成两端全圆角的药丸形状且为实色填充。\n\n另外还有一个我已经确定的要求：页面里所有的文字，我要那种打字机一样每个字一样宽的，显得更有理工科的气质。\n\n**交互标准**\n孩子们点击任意一行地震数据时，旁边的缩略地图要立刻高亮对应的坐标点。中英双语切换发生时，界面文字替换需要平滑，不允许因为英文单词较长就把外层的黑框网格给挤变形。\n\n**验收口径**\n- 在 1366x768 分辨率下严丝合缝填满整个视口，完全不触发滚动条。\n- 纯白、亮蓝与橙绿色的色彩对比度必须符合低视力儿童友好标准。\n- 输入栏与地图组件在极端高密的线框网格约束下依然保持可用点击面积。",
+  "referenceCount": 2,
+  "references": [
+   {
+    "src": "assets/task-035-ref-a.webp",
+    "caption": "Palette & components",
+    "label": "A",
+    "directive": "copy",
+    "alt": "Reference A for Task 35: Palette & components"
+   },
+   {
+    "src": "assets/task-035-ref-b.webp",
+    "caption": "Dense technical grid",
+    "label": "B",
+    "directive": "copy",
+    "alt": "Reference B for Task 35: Dense technical grid"
+   }
+  ],
+  "output": {
+   "src": "assets/task-035-output.webp",
+   "caption": "GPT-6 Astra · frozen final HTML, replayed locally",
+   "model": "GPT-6 Astra",
+   "alt": "Generated webpage for Task 35: A bilingual seismic observatory",
+   "note": "The generated page uses illustrative teaching data. The screenshot was replayed on 13 October 2026; the page’s clock and dates are dynamic."
+  },
+  "tags": [
+   "2 references",
+   "English / Chinese",
+   "Linked data views"
+  ],
+  "directives": [
+   {
+    "aspect": "Palette",
+    "source": "A",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Components",
+    "source": "A",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Layout",
+    "source": "B",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Typography",
+    "source": null,
+    "mode": "Specify monospace"
+   }
+  ],
+  "score": {
+   "overall": 60.44,
+   "b": 60.44,
+   "c": 100.0,
+   "r": 66.66666666666667,
+   "source": "Frozen benchmark",
+   "kind": "frozen",
+   "note": "Evaluation of the original benchmark HTML shown here.",
+   "htmlSha256": "407c76c49eb9e719b06d270386b623f447e3a79d4d481f7973a93e676cf04683"
+  }
+ },
+ {
+  "id": 125,
+  "sourceId": 205,
+  "title": "Two Rivers clothing collection",
+  "language": "en",
+  "category": "Commerce",
+  "summary": "Combine a book page’s layout, a dark dashboard’s palette, and restaurant-style cards into a filterable clothing collection; avoid typography from two other references.",
+  "query": "**Overview**\nI am putting together a side project for a local neighborhood apparel shop called Two Rivers. This will be their main category listing page. My main concern is getting this shipped quickly and keeping it easy to deploy, so I need it as a single-file HTML deliverable with no external CSS or JS files to juggle. It has to load fast and not be bogged down by bloated code. The primary audience will be browsing from home, so design it primarily for a widescreen desktop experience.\n\n**Page structure**\n- We will start with a clean top navigation bar for our main departments.\n- For the initial presentation, I really liked the blocking on that light-colored book-selling page. I want to use that large asymmetric split for the first two sections — a big hero image on the right with introductory text on the left for the top block, and then reverse the sides for the featured collection immediately below it.\n- Underneath those intro blocks, the main product feed should drop into a dense three-column grid, just like the lower section of that same book page.\n- A functional footer for local store hours and contact info.\n\n**Visual**\n- For the color scheme, I want to pull directly from the dark dashboard page that has all those long tables. Give me that exact extreme pure black background, with bright white or mid-grey text. Use the muted yellow/yellow-green from those progress bars for any accents, highlights, or active links.\n- When it comes to the product cards in the grid, grab the look from the warm gradient restaurant page. I want those big, white, rounded panels. Inside each card, lay it out with a small circular image on the left, the item details on the right, and use those little colored capsule tags for things like sizes or \"Sale\" badges. Any primary action buttons should use that same fully rounded pill shape.\n- One thing to actively avoid: when setting the text, do not follow the typography on the page with all the team portraits — it is far too thin and lacks any visual weight. Also, ignore the text styling on the dark page with the glowing cyan elements, where the massive headings clash too hard with the tiny body copy. I just need a standard, well-proportioned sans-serif that is easy to read at a glance.\n\n**Interaction**\n- I want a stateful view for the product grid. Users should be able to click on size or color tags and see the grid instantly filter without a page reload.\n- Include a smooth CSS transition when hovering over the product cards, perhaps elevating the card slightly and swapping the circular image to an alternate product angle.\n\n**Acceptance**\n- The deliverable must be a single, self-contained HTML file.\n- The asymmetric sections and three-column grid must look balanced and fill a desktop widescreen monitor elegantly.\n- Client-side filtering logic must be fully functional for the dummy items provided.",
+  "referenceCount": 5,
+  "references": [
+   {
+    "src": "assets/task-125-ref-a.webp",
+    "caption": "Asymmetric layout & grid",
+    "label": "A",
+    "directive": "copy",
+    "alt": "Reference A for Task 125: Asymmetric layout & grid"
+   },
+   {
+    "src": "assets/task-125-ref-b.webp",
+    "caption": "Dark palette & accents",
+    "label": "B",
+    "directive": "copy",
+    "alt": "Reference B for Task 125: Dark palette & accents"
+   },
+   {
+    "src": "assets/task-125-ref-c.webp",
+    "caption": "Avoid thin typography",
+    "label": "C",
+    "directive": "invert",
+    "alt": "Reference C for Task 125: Avoid thin typography"
+   },
+   {
+    "src": "assets/task-125-ref-d.webp",
+    "caption": "Rounded cards & pills",
+    "label": "D",
+    "directive": "copy",
+    "alt": "Reference D for Task 125: Rounded cards & pills"
+   },
+   {
+    "src": "assets/task-125-ref-e.webp",
+    "caption": "Avoid extreme type contrast",
+    "label": "E",
+    "directive": "invert",
+    "alt": "Reference E for Task 125: Avoid extreme type contrast"
+   }
+  ],
+  "output": {
+   "src": "assets/task-125-output.webp",
+   "caption": "GPT-6 Astra · frozen benchmark final artifact",
+   "model": "GPT-6 Astra",
+   "alt": "Generated webpage for Task 125: Two Rivers clothing collection",
+   "note": "Screenshot replayed from the unmodified, score-matched frozen HTML."
+  },
+  "tags": [
+   "5 references",
+   "Product filters",
+   "Detail views"
+  ],
+  "directives": [
+   {
+    "aspect": "Layout",
+    "source": "A",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Palette",
+    "source": "B",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Component",
+    "source": "D",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Typography",
+    "source": "C",
+    "mode": "Avoid"
+   },
+   {
+    "aspect": "Typography",
+    "source": "E",
+    "mode": "Avoid"
+   }
+  ],
+  "score": {
+   "overall": 91.57,
+   "b": 91.57,
+   "c": 100.0,
+   "r": 100.0,
+   "source": "Frozen benchmark",
+   "kind": "frozen",
+   "note": "Evaluation of the original benchmark HTML shown here.",
+   "htmlSha256": "f09787b694454b3072f7d7050e258739efe6541b612b71a43af53c48c55ba27b"
+  }
+ },
+ {
+  "id": 273,
+  "sourceId": 460,
+  "title": "Silent Radio mini-game arcade",
+  "language": "zh",
+  "category": "Interactive applications",
+  "summary": "Build a playable arcade by combining an icon gallery’s compact grid, an event page’s badges and forms, and a boatyard page’s bold typography.",
+  "query": "我是做数据分析的，近期我们「无声电台」项目为了提升留存率，准备新上一个浏览器小游戏聚合页。页面呈现对数据转化很关键，我想参考后面米白色背景带粗黑线的造船页里那套文字处理方式，就要那种极其粗壮醒目的无衬线大字做标题，字粗细对比极其强烈，拉出一种很强的海报或复古老报纸的张力。底板这块我已经决定了，整页底色我要深的，所有的字要直接浮在这个深色底上，让数字和图表更抓眼。\n\n页面顶端留一个基础的导航栏方便切换品类。中间核心是游戏入口矩阵，这片区域我觉得中间那个深色图标展示页处理得挺对味，内容高度居中收拢、紧凑得很，你就也照那意思给弄个三列或两列的小型方块网格阵列，接着在阵列正下方紧挨着放一个代码区块，展示数据调用的接口。至于网格里的小游戏卡片，我看上了最前头黄蓝主色活动网站里的细节，卡片图片左上角也要直接叠加一个醒目的纯黄底色方块，正好用来标示游戏通关率。\n\n底下再留个订阅新游内测的表单。表单的输入框和按钮也顺着前头那个黄蓝活动页里的做法，全做成直角且完全扁平的。最后补一段根据设备宽度自动折叠适配的周榜数据区，以可读和方便玩家自行筛选为准。",
+  "referenceCount": 3,
+  "references": [
+   {
+    "src": "assets/task-273-ref-a.webp",
+    "caption": "Badges & form controls",
+    "label": "A",
+    "directive": "copy",
+    "alt": "Reference A for Task 273: Badges & form controls"
+   },
+   {
+    "src": "assets/task-273-ref-b.webp",
+    "caption": "Compact grid & code block",
+    "label": "B",
+    "directive": "copy",
+    "alt": "Reference B for Task 273: Compact grid & code block"
+   },
+   {
+    "src": "assets/task-273-ref-c.webp",
+    "caption": "Bold typography",
+    "label": "C",
+    "directive": "copy",
+    "alt": "Reference C for Task 273: Bold typography"
+   }
+  ],
+  "output": {
+   "src": "assets/task-273-output.webp",
+   "caption": "GPT-6 Astra · frozen benchmark final artifact",
+   "model": "GPT-6 Astra",
+   "alt": "Generated webpage for Task 273: Silent Radio mini-game arcade",
+   "note": "Screenshot replayed from the unmodified, score-matched frozen HTML."
+  },
+  "tags": [
+   "3 references",
+   "Playable games",
+   "Searchable rankings"
+  ],
+  "directives": [
+   {
+    "aspect": "Layout",
+    "source": "B",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Typography",
+    "source": "C",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Component",
+    "source": "A",
+    "mode": "Copy"
+   },
+   {
+    "aspect": "Palette",
+    "source": null,
+    "mode": "Specify"
+   }
+  ],
+  "score": {
+   "overall": 87.84,
+   "b": 87.84,
+   "c": 100.0,
+   "r": 100.0,
+   "source": "Frozen benchmark",
+   "kind": "frozen",
+   "note": "Evaluation of the original benchmark HTML shown here.",
+   "htmlSha256": "e07fe8b4d462fb28b16b5a19479b7ba455b27c33d326245a2ad84bbb131459ba"
+  }
+ }
+]

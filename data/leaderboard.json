@@ -1,0 +1,101 @@
+[
+  {
+    "name": "GPT-6 Astra",
+    "logo": "openai",
+    "overall": 52.12,
+    "b": 75.68,
+    "c": 94.89,
+    "r": 57.93,
+    "turns": 21.7,
+    "tokens": 1.4,
+    "calls": 30.1
+  },
+  {
+    "name": "Qwen3.8-Max",
+    "logo": "qwen",
+    "overall": 48.95,
+    "b": 73.86,
+    "c": 85.56,
+    "r": 62.61,
+    "turns": 9.8,
+    "tokens": 0.68,
+    "calls": 11.3
+  },
+  {
+    "name": "Grok 4.6",
+    "logo": "grok",
+    "overall": 48.83,
+    "b": 72.96,
+    "c": 81.17,
+    "r": 66.25,
+    "turns": 21.2,
+    "tokens": 1.28,
+    "calls": 41.2
+  },
+  {
+    "name": "Kimi K3",
+    "logo": "kimi",
+    "overall": 47.55,
+    "b": 72.74,
+    "c": 85.0,
+    "r": 61.33,
+    "turns": 25.4,
+    "tokens": 2.09,
+    "calls": 31.3
+  },
+  {
+    "name": "Claude Fable 5",
+    "logo": "claude",
+    "overall": 44.61,
+    "b": 72.05,
+    "c": 77.83,
+    "r": 61.44,
+    "turns": 15.2,
+    "tokens": 1.1,
+    "calls": 16.9
+  },
+  {
+    "name": "GLM-5.3",
+    "logo": "zai",
+    "overall": 42.6,
+    "b": 71.23,
+    "c": 83.56,
+    "r": 55.77,
+    "turns": 38.3,
+    "tokens": 2.99,
+    "calls": 42.2
+  },
+  {
+    "name": "DeepSeek-V4-Pro",
+    "logo": "deepseek",
+    "overall": 37.09,
+    "b": 71.16,
+    "c": 71.72,
+    "r": 53.46,
+    "turns": 25.3,
+    "tokens": 1.12,
+    "calls": 25.6
+  },
+  {
+    "name": "Seed2.1 Pro",
+    "logo": "doubao",
+    "overall": 32.06,
+    "b": 69.0,
+    "c": 56.56,
+    "r": 58.67,
+    "turns": 22.7,
+    "tokens": 1.01,
+    "calls": 21.8
+  },
+  {
+    "name": "Gemini 3.1 Pro",
+    "logo": "gemini",
+    "overall": 19.01,
+    "b": 61.45,
+    "c": 33.44,
+    "r": 65.0,
+    "turns": 26.7,
+    "tokens": 2.34,
+    "calls": 25.9
+  }
+]

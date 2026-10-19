@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#edf5fc" name="theme-color"/>
+<meta content="RefCraft: Benchmarking Visual-Reference-Conditioned Agentic Generation through Web Development. A benchmark of 300 multimodal tasks for reference-guided webpage development." name="description"/>
+<meta content="RefCraft: Visual-Reference-Conditioned Agentic Generation" property="og:title"/>
+<meta content="300 multimodal tasks, 1–5 reference webpages per task, and a unified evaluation of nine frontier models." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="assets/social-card.png" property="og:image"/>
+<title>RefCraft: Benchmarking Visual-Reference-Conditioned Agentic Generation</title>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css?v=22" rel="stylesheet"/>
+<script defer="" src="data/site-data.js?v=22"></script>
+<link href="leaderboard.css?v=22" rel="stylesheet"/><script defer="" src="leaderboard.js?v=22"></script><script defer="" src="app.js?v=22"></script><link href="visual.css?v=22" rel="stylesheet"/>
+<script>
+/* Scroll reveal and numeric count-up. Self-contained so the page never depends
+   on it to stay readable: without IntersectionObserver, reduced motion, or a
+   script error, "js-reveal" is absent and every element renders normally. */
+(function () {
+  var root = document.documentElement;
+  try {
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  } catch (error) { return; }
+  root.classList.add('js-reveal');
+  var showAll = function () {
+    root.classList.remove('js-reveal');
+    var pending = document.querySelectorAll('[data-reveal]');
+    for (var i = 0; i < pending.length; i++) pending[i].classList.add('is-revealed');
+  };
+  var safety = setTimeout(showAll, 4000);
+  /* The header gains a shadow once the page leaves the masthead. */
+  var header = null, ticking = false;
+  var syncHeader = function () {
+    ticking = false;
+    if (!header) header = document.querySelector('.site-header');
+    if (header) header.classList.toggle('is-scrolled', window.scrollY > 12);
+  };
+  window.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(syncHeader);
+  }, { passive: true });
+  var countUp = function (scope) {
+    var targets = scope.querySelectorAll('[data-count]');
+    for (var i = 0; i < targets.length; i++) (function (node) {
+      var target = parseFloat(node.getAttribute('data-count'));
+      var decimals = parseInt(node.getAttribute('data-decimals'), 10) || 0;
+      if (!isFinite(target)) return;
+      var started = null, duration = 1000;
+      var step = function (now) {
+        if (started === null) started = now;
+        var progress = Math.min((now - started) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        node.textContent = (target * eased).toFixed(decimals)
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        if (progress < 1) requestAnimationFrame(step);
+        else node.textContent = target.toFixed(decimals)
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      };
+      requestAnimationFrame(step);
+    })(targets[i]);
+  };
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      var observer = new IntersectionObserver(function (entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (!entries[i].isIntersecting) continue;
+          var el = entries[i].target;
+          el.classList.add('is-revealed');
+          observer.unobserve(el);
+          countUp(el);
+        }
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+      var items = document.querySelectorAll('[data-reveal]');
+      for (var i = 0; i < items.length; i++) observer.observe(items[i]);
+      clearTimeout(safety);
+    } catch (error) { clearTimeout(safety); showAll(); }
+  });
+})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-inner">
+<div class="nav-identity"><a class="brand" href="#main"><img alt="" class="brand-mark" height="31" src="assets/brands/qwen.png" title="Qwen" width="31"/>RefCraft</a></div>
+<nav aria-label="Page sections"><a href="#abstract">Abstract</a><a href="#benchmark">Benchmark</a><a href="#leaderboard">Results</a><a href="#examples">Examples</a><a href="#citation">BibTeX</a></nav>
+</div></header>
+<main id="main"><div class="paper-masthead"><section aria-labelledby="paper-title" class="paper-header container">
+<div class="masthead-grid"><h1 id="paper-title"><span class="paper-name"><img alt="" class="paper-mascot" fetchpriority="high" height="346" src="assets/refcraft-mascot.png" width="452"/><span>Ref<span class="craft-word">Craft</span></span><span class="sr-only">: </span></span><span class="paper-subtitle">Benchmarking Visual-Reference-Conditioned <br class="title-break"/>Agentic Generation through Web Development</span></h1><div aria-label="Authors" class="authors">
+<span><a aria-label="Yuchi Wang — Personal homepage" data-author="yuchi-wang" href="https://wangyuchi369.github.io/" rel="noopener noreferrer" target="_blank" title="Yuchi Wang — Personal homepage">Yuchi Wang</a><sup>1,2 *</sup></span><span><a aria-label="Rongyao Fang — Personal homepage" data-author="rongyao-fang" href="https://rongyaofang.github.io/" rel="noopener noreferrer" target="_blank" title="Rongyao Fang — Personal homepage">Rongyao Fang</a><sup>2</sup></span><span><a aria-label="Weihao Yu — Personal homepage" data-author="weihao-yu" href="https://yuyouxixi.github.io/" rel="noopener noreferrer" target="_blank" title="Weihao Yu — Personal homepage">Weihao Yu</a><sup>2,3</sup></span><span><a aria-label="Xilin Wei — Personal homepage" data-author="xilin-wei" href="https://wiselnn570.github.io/" rel="noopener noreferrer" target="_blank" title="Xilin Wei — Personal homepage">Xilin Wei</a><sup>2,4</sup></span><span><a aria-label="Tiancheng Gu — Personal homepage" data-author="tiancheng-gu" href="https://tiancheng-gu.github.io/" rel="noopener noreferrer" target="_blank" title="Tiancheng Gu — Personal homepage">Tiancheng Gu</a><sup>2,5</sup></span><span><a aria-label="Dingkang Yang — Personal homepage" data-author="dingkang-yang" href="https://ydk122024.github.io/" rel="noopener noreferrer" target="_blank" title="Dingkang Yang — Personal homepage">Dingkang Yang</a><sup>1,4</sup></span><span><a aria-label="Hang Zhang — Google Scholar profile (author mapping to confirm)" data-author="hang-zhang" href="https://scholar.google.com/citations?hl=en&amp;user=kMpV724AAAAJ" rel="noopener noreferrer" target="_blank" title="Hang Zhang — Google Scholar profile (author mapping to confirm)">Hang Zhang</a><sup>2</sup></span><span><a aria-label="Dayiheng Liu — Personal homepage" data-author="dayiheng-liu" href="https://liudayiheng.github.io/" rel="noopener noreferrer" target="_blank" title="Dayiheng Liu — Personal homepage">Dayiheng Liu</a><sup>2</sup></span><span><a aria-label="Hongsheng Li — Personal homepage" data-author="hongsheng-li" href="https://www.ee.cuhk.edu.hk/~hsli/" rel="noopener noreferrer" target="_blank" title="Hongsheng Li — Personal homepage">Hongsheng Li</a><sup>1 †</sup></span><span><a aria-label="Shuai Bai — Personal homepage" data-author="shuai-bai" href="https://shuaibai623.github.io/" rel="noopener noreferrer" target="_blank" title="Shuai Bai — Personal homepage">Shuai Bai</a><sup>2 †</sup></span>
+</div><figure aria-labelledby="composition-caption" class="composition-mark">
+<svg aria-hidden="true" viewbox="0 10 276 180">
+<path class="guide" d="M6 8v190M266 8v190M0 18h276M0 188h276"></path>
+<g class="reference-sheet"><rect height="76" rx="3" width="104" x="18" y="25"></rect><path class="browser-rule" d="M18 39h104"></path><circle cx="25" cy="32" r="1.4"></circle><circle cx="30" cy="32" r="1.4"></circle><circle cx="35" cy="32" r="1.4"></circle><rect class="ref-fill-a" height="45" width="22" x="26" y="47"></rect><path class="content-line" d="M55 51h52M55 59h36M55 80h52M55 87h42"></path><path class="sample-a" d="M55 69h52"></path></g>
+<g class="reference-sheet"><rect height="76" rx="3" width="104" x="36" y="56"></rect><path class="browser-rule" d="M36 70h104"></path><circle cx="43" cy="63" r="1.4"></circle><circle cx="48" cy="63" r="1.4"></circle><circle cx="53" cy="63" r="1.4"></circle><rect class="ref-fill-b" height="20" width="88" x="44" y="78"></rect><path class="content-line" d="M44 107h39M44 114h29M94 107h38M94 114h26"></path></g>
+<g class="reference-sheet"><rect height="76" rx="3" width="104" x="54" y="87"></rect><path class="browser-rule" d="M54 101h104"></path><circle cx="61" cy="94" r="1.4"></circle><circle cx="66" cy="94" r="1.4"></circle><circle cx="71" cy="94" r="1.4"></circle><rect class="ref-fill-c" height="25" width="25" x="62" y="109"></rect><rect class="ref-fill-c" height="25" width="25" x="94" y="109"></rect><rect class="ref-fill-c" height="25" width="24" x="126" y="109"></rect><path class="content-line" d="M62 143h88M62 151h67"></path></g>
+<path class="composition-arrow" d="M161 125h15v-66h11m-5-4 5 4-5 4"></path>
+<g class="output-sheet"><rect height="108" rx="3" width="68" x="193" y="35"></rect><path class="browser-rule" d="M193 49h68"></path><circle cx="200" cy="42" r="1.4"></circle><circle cx="205" cy="42" r="1.4"></circle><rect class="ref-fill-a" height="77" width="10" x="200" y="57"></rect><rect class="ref-fill-b" height="23" width="37" x="217" y="57"></rect><path class="content-line" d="M217 88h37M217 94h25"></path><rect class="ref-fill-c" height="15" width="15" x="217" y="103"></rect><rect class="ref-fill-c" height="15" width="15" x="239" y="103"></rect><path class="content-line" d="M217 127h37"></path></g>
+<text x="54" y="181">references</text><text x="190" y="162">new webpage</text>
+</svg><figcaption id="composition-caption">Select · interpret · compose</figcaption></figure></div>
+<div class="affiliations"><span><sup>1</sup> MMLab, CUHK</span><span><sup>2</sup> Alibaba Token Hub</span><span><sup>3</sup> The Chinese University of Hong Kong</span><span><sup>4</sup> Fudan University</span><span><sup>5</sup> The University of Sydney</span></div>
+<p class="author-notes">* Work done during an internship at Alibaba Token Hub. <span>† Corresponding authors.</span></p>
+<div aria-label="Project resources" class="resource-links">
+<a aria-label="arXiv homepage — RefCraft paper coming soon" class="resource primary" href="https://arxiv.org/" rel="noopener noreferrer" target="_blank" title="RefCraft’s arXiv link will be added when available."><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Zm0 0v6h5M8 13h8M8 17h5"></path></svg>arXiv<small>coming soon</small></a>
+<span aria-label="GitHub, coming soon" class="resource unavailable" data-resource="github"><img alt="" class="official-icon" height="24" src="assets/brands/github.png" width="24"/>GitHub<small>coming soon</small></span>
+<span aria-label="Hugging Face, coming soon" class="resource unavailable" data-resource="huggingface"><img alt="" class="official-icon huggingface-icon" height="24" src="assets/brands/huggingface.png" width="24"/>Hugging Face<small>coming soon</small></span>
+<a class="resource" href="#leaderboard"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 20V10h4v10m2 0V4h4v16m2 0v-7h4v7M2 20h20"></path></svg>Leaderboard</a>
+<a class="resource" href="#analysis"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M9 12l2 2 5-5M12 3l8 3v6c0 5-8 9-8 9s-8-4-8-9V6Z"></path></svg>Human alignment</a></div>
+<p class="paper-deck"><span>Agents develop new webpages from instructions and visual references.</span><span class="deck-facts">300 tasks <i>·</i> 1–5 reference webpages per task <i>·</i> 8 application domains</span></p></section></div><section aria-labelledby="abstract-title" class="section reading-width" data-section="abstract" id="abstract">
+<div class="section-heading"><span aria-hidden="true" class="section-index">01</span><h2 id="abstract-title">Abstract</h2></div>
+<p class="abstract-text" id="abstract-text"></p>
+</section><div class="band band-tint"><section aria-labelledby="benchmark-title" class="section container" data-section="benchmark" id="benchmark">
+<div class="section-heading"><span aria-hidden="true" class="section-index">02</span><h2 id="benchmark-title">Benchmark &amp; Evaluation</h2></div>
+<p class="section-intro">A task combines a natural-language instruction with screenshots from one to five reference webpages. The agent must <strong>selectively interpret and compose</strong> visual properties while implementing the requested functionality; reproducing a single screenshot is not the objective.</p>
+<figure class="paper-figure teaser-figure" data-reveal="">
+<button aria-label="Enlarge the paper’s overview figure" class="figure-zoom" data-enlarge="assets/paper-v2-teaser.webp" data-title="Figure 1. Overview of RefCraft" type="button"><img alt="Overview of RefCraft: (a) eight application domains and their subdomains around the project mascot, with reference-use intensity and reference-count distributions; (b) a task whose new webpage borrows a palette from reference A and a layout from reference B before the agent renders, inspects and revises it; (c) overall score against reported token use for nine frontier models, with the Pareto frontier marked." height="1608" fetchpriority="low" src="assets/paper-v2-teaser.webp" width="2382"/><span class="figure-open">Enlarge figure ↗</span></button>
+<figcaption><strong>Overview of RefCraft.</strong> <b>(a)</b> Eight application domains, varied reference counts, and different levels of reference use. <b>(b)</b> A task whose new webpage takes its palette from reference A and its layout from reference B, which the agent then renders, inspects, and revises. <b>(c)</b> Overall score against reported token use across the nine evaluated models. From Figure 1 of the paper.</figcaption>
+</figure>
+<div class="benchmark-statistics"><div class="dataset-summary"><h3>Dataset Statistics</h3>
+<ul class="stat-row" data-reveal="">
+<li><strong data-count="300" data-decimals="0">300</strong><span>tasks</span></li>
+<li><strong data-count="186" data-decimals="0">186</strong><span>webpage types</span></li>
+<li><strong data-count="3491" data-decimals="0">3,491</strong><span>reference screenshots</span></li>
+<li><strong data-count="12082" data-decimals="0">12,082</strong><span>scored criteria</span></li>
+</ul>
+</div></div><div class="evaluation-layout"><div class="evaluation-intro"><h3>Evaluating the Complete Task</h3><p>Models operate in a shared <strong>OpenCode</strong> environment. Each agent writes a self-contained HTML page and may render, inspect, and revise intermediate implementations. Browser traces and measurements expose relevant page states; programmatic checks assess deterministic criteria, while a vision-language judge evaluates semantic and perceptual requirements.</p></div><div class="benchmark-protocol">
+<div class="score-definitions"><div><strong>B</strong><p><b>Keypoint completion</b><br/>Mean normalized score across the task’s keypoints.</p></div><div><strong>C</strong><p><b>Core functionality</b><br/>Minimum completion rate across essential functional goals.</p></div><div><strong>R</strong><p><b>Reference following</b><br/>Mean adherence across applicable reference groups.</p></div></div>
+<div aria-label="How the benchmark score is computed" class="scoring-equations" role="group">
+<div class="scoring-step"><div class="scoring-label"><span aria-hidden="true">1</span>Score each task</div><div class="scoring-math"><math aria-label="S sub t equals the minimum of B sub t, C sub t, and R sub t" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>S</mi><mi>t</mi></msub><mo>=</mo><mi mathvariant="normal">min</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>B</mi><mi>t</mi></msub><mo>,</mo><msub><mi>C</mi><mi>t</mi></msub><mo>,</mo><msub><mi>R</mi><mi>t</mi></msub><mo>)</mo></mrow></mrow></math></div></div>
+<div class="scoring-step"><div class="scoring-label"><span aria-hidden="true">2</span>Average across tasks</div><div class="scoring-math"><math aria-label="Overall equals one over 300 times the sum of S sub t for t from 1 to 300" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mtext>Overall</mtext><mo>=</mo><mfrac><mn>1</mn><mn>300</mn></mfrac><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mn>300</mn></munderover><msub><mi>S</mi><mi>t</mi></msub></mrow></math></div></div>
+</div>
+<p class="scoring-note">Each task is limited by its weakest dimension. Overall averages these task scores; R is omitted when no reference group applies.</p>
+</div></div><details class="method-details"><summary>How the benchmark is constructed</summary><div class="construction-notes"><article><h3>1. Visual reference pool</h3><p>Licensed templates, conventional synthetic pages, and atypically styled pages provide varied layouts, palettes, typography, components, interactions, and visual character.</p></article><article><h3>2. Controlled task synthesis</h3><p>Each design dimension can <em>copy</em>, <em>adapt</em>, or <em>invert</em> a reference, follow an explicit textual requirement (<em>specify</em>), or remain unconstrained (<em>ignore</em>).</p></article><article><h3>3. Verified evaluation keypoints</h3><p>Requirements are decomposed into independently assessable criteria, checked through model review and revised by ten web-development experts.</p></article></div><figure class="paper-figure framework-figure">
+<button aria-label="Enlarge benchmark construction and evaluation figure" class="figure-zoom" data-enlarge="assets/paper-v2-framework.webp" data-title="Figure 2. Benchmark construction and evaluation" type="button"><img alt="Paper diagram of reference-pool curation, instruction and keypoint construction, agentic generation, and evidence-based evaluation." loading="lazy" src="assets/paper-v2-framework.webp"/><span aria-hidden="true" class="zoom-label">↗</span></button>
+<figcaption><strong>Benchmark construction and evaluation.</strong> A diverse reference pool supports controlled user requests. Verified keypoints remain hidden from the generation agent and guide programmatic and visual evaluation of the completed webpage.</figcaption>
+</figure></details></section></div><section aria-labelledby="leaderboard-title" class="section container" data-section="leaderboard" id="leaderboard">
+<div class="section-heading"><span aria-hidden="true" class="section-index">03</span><h2 id="leaderboard-title">Leaderboard &amp; Analysis</h2></div>
+<div class="leaderboard-heading"><h3>Model Comparison</h3><span id="leaderboard-count">9 models</span></div><div class="table-toolbar"><div aria-label="Visible leaderboard metrics" class="leaderboard-views" id="leaderboard-views" role="group"><button aria-pressed="true" data-view="scores" type="button">Scores</button><button aria-pressed="false" data-view="resources" type="button">Resources</button><button aria-pressed="false" data-view="all" type="button">All metrics</button></div><div class="table-actions"><label><span class="sr-only">Search models</span><input autocomplete="off" id="model-search" placeholder="Find a model…" type="search"/></label><a class="download-link" download="" href="data/leaderboard.csv">Download CSV ↓</a></div></div>
+<div aria-label="Results table, scroll horizontally on small screens" class="table-wrap" role="region" tabindex="0"><table id="leaderboard-table"><caption class="sr-only">Nine-model results from the paper. Select Scores, Resources, or All metrics to change columns. Select a model to expand its metrics. Rank always refers to Overall.</caption><thead></thead><tbody></tbody></table></div>
+<p class="table-status sr-only" id="table-status" role="status"></p>
+<p class="table-note"><span><strong>B</strong> Keypoint completion · <strong>C</strong> Core functionality · <strong>R</strong> Reference following.</span> <span>Overall is the mean of task-level min(B, C, R), out of 100. Tokens are provider-reported means per task; accounting can differ across providers. <b>Bold</b> marks the best value; <u>underline</u> the second best. Select a column to sort, or a model to inspect its details.</span></p>
+
+<div aria-labelledby="capability-title" class="capability-panel" data-reveal="" id="capabilities" role="group">
+<div class="panel-heading"><h3 id="capability-title">Capability Breakdown</h3><span>Keypoint scores averaged equally across the nine models · 0–100</span></div>
+<div class="capability-grid">
+<figure class="capability-chart">
+<figcaption>By Visual Dimension</figcaption>
+<ul class="bar-list">
+<li style="--bar:92.4%"><span class="bar-label">Palette</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">92.4</span></li>
+<li style="--bar:83.1%"><span class="bar-label">Layout</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">83.1</span></li>
+<li style="--bar:82.2%"><span class="bar-label">Components</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">82.2</span></li>
+<li style="--bar:76.1%"><span class="bar-label">Typography</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">76.1</span></li>
+<li style="--bar:58.8%"><span class="bar-label">Visual character</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">58.8</span></li>
+<li class="is-low" style="--bar:43.6%"><span class="bar-label">Interaction</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">43.6</span></li>
+</ul>
+</figure>
+<figure class="capability-chart">
+<figcaption>By Requirement Type</figcaption>
+<ul class="bar-list">
+<li style="--bar:98.87%"><span class="bar-label"><em>Invert</em></span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">98.9</span></li>
+<li style="--bar:87.68%"><span class="bar-label"><em>Specify</em></span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">87.7</span></li>
+<li style="--bar:82.42%"><span class="bar-label"><em>Copy</em></span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">82.4</span></li>
+<li class="is-low" style="--bar:75.49%"><span class="bar-label"><em>Adapt</em></span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">75.5</span></li>
+</ul>
+<p class="chart-aside">Agents transfer concrete, locally observable attributes more reliably than interactive behavior or coordinated visual character. Selectively <em>adapting</em> a referenced attribute is harder than reproducing, specifying, or avoiding it.</p>
+</figure>
+</div>
+<p class="panel-note">Paper §5.3.1 and Figure 3.</p>
+</div>
+
+<div aria-labelledby="agreement-title" class="results-validation agreement-panel" data-reveal="" id="analysis" role="group">
+<div class="panel-heading"><h3 id="agreement-title">Agreement with Human Judgment</h3><span>100 model–task artifacts · 10 web-development experts</span></div>
+<div class="agreement-metrics">
+<div><strong>0.747</strong><span>Pearson <i>r</i></span><p>Task score vs. mean expert score</p></div>
+<div><strong>0.64</strong><span>Weighted Cohen’s <i>κ</i></span><p>Keypoint label vs. median expert label</p></div>
+<div><strong>0.89</strong><span>Spearman <i>ρ</i></span><p>Model ranking vs. <a href="https://arena.ai/leaderboard/code/image-to-webdev" rel="noopener noreferrer" target="_blank">Arena.AI human preferences ↗</a></p></div>
+</div>
+<p class="panel-note">Paper §5.3.3 · Arena snapshot September 24, 2026. The archived comparison of seven shared models recomputes the ranking correlation to <strong>ρ = 0.786</strong>; the paper reports 0.89 without listing its matched model set. <a download="" href="data/arena-alignment.csv">Archived ranking data ↓</a></p>
+</div></section><div class="band band-tint"><section aria-labelledby="examples-title" class="section container" data-section="examples" id="examples">
+<div class="section-heading"><span aria-hidden="true" class="section-index">04</span><h2 id="examples-title">Interactive Examples</h2></div>
+<div aria-label="Select an example" class="example-gallery" id="example-tabs" role="tablist"></div>
+<div class="example-panel" id="example-panel" role="tabpanel"></div>
+<noscript><p>Enable JavaScript to operate the example webpages and explore the results.</p></noscript>
+</section></div><section aria-labelledby="citation-title" class="section reading-width citation-section" data-section="citation" id="citation">
+<div class="section-heading"><span aria-hidden="true" class="section-index">05</span><h2 id="citation-title">BibTeX</h2></div>
+<p>If you find RefCraft useful in your research, please consider citing our work.</p>
+<div class="citation-box"><div class="citation-actions"><a download="" href="data/refcraft.bib">Download .bib</a><button id="copy-citation" type="button">Copy citation</button></div><pre aria-label="BibTeX citation" tabindex="0"><code id="bibtex">@misc{wang_refcraft,
+  title  = {RefCraft: Benchmarking Visual-Reference-Conditioned
+            Agentic Generation through Web Development},
+  author = {Yuchi Wang and Rongyao Fang and Weihao Yu and
+            Xilin Wei and Tiancheng Gu and Dingkang Yang and
+            Hang Zhang and Dayiheng Liu and Hongsheng Li
+            and Shuai Bai},
+  note   = {Manuscript}
+}</code></pre></div>
+</section></main>
+<footer class="site-footer container"><span>RefCraft · Research project</span><a href="credits.html">Image &amp; font credits</a><a href="#main">Back to top ↑</a></footer>
+<div class="toast" id="toast" role="status"></div>
+<dialog aria-labelledby="demo-dialog-title" id="demo-dialog"><div class="demo-dialog-heading"><h2 id="demo-dialog-title">Interactive example</h2><button aria-label="Close expanded example" id="close-demo" type="button">Close ✕</button></div><div id="demo-dialog-body"></div></dialog>
+<dialog aria-labelledby="image-dialog-title" id="image-dialog"><div class="dialog-top"><p id="image-dialog-title"></p><div aria-label="Image magnification" class="image-view-controls" role="group"><button aria-label="Fit image to available width" aria-pressed="true" id="image-fit" type="button">Fit</button><button aria-label="View image at actual size" aria-pressed="false" id="image-actual" type="button">100%</button><a aria-label="Download original image" download="refcraft-figure.webp" id="download-image">Download</a></div><button aria-label="Close enlarged figure" id="close-dialog" type="button">✕</button></div><div aria-label="Image view, scroll to inspect at actual size" class="image-viewport" id="image-viewport" role="region" tabindex="0"><img alt="" id="dialog-image"/></div><p class="dialog-hint">Select 100% to read details · Scroll to inspect · Esc to close</p></dialog>
+</body>
+</html>

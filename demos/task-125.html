@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Two Rivers, your neighborhood clothing shop. Thoughtfully chosen everyday clothes, easy fits, and a little local character.">
+  <title>All Clothing | Two Rivers</title>
+  <style>
+    :root{--black:#000;--white:#fff;--muted:#a2a29c;--accent:#9aa741;--line:#272922;--ink:#252820;--paper:#eeeee7}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}button,a,input,select{-webkit-tap-highlight-color:transparent}button,select{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer}a{color:inherit;text-decoration:none}button{border:0}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:5px}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.16;letter-spacing:-1.5px}p{color:var(--muted)}svg{display:block}button svg,a svg{flex-shrink:0}::selection{background:var(--accent);color:#000}.wrap{max-width:1280px;width:calc(100% - 80px);margin-inline:auto}.svg-defs{position:absolute;width:0;height:0;overflow:hidden}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.96);border-bottom:1px solid #1d1f1a}.nav-wrap{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:inline-flex;align-items:center;gap:12px;font-size:23px;font-weight:800;letter-spacing:-.8px;white-space:nowrap}.brand-mark{width:35px;height:32px;color:var(--accent)}.main-nav{display:flex;align-items:center;gap:32px}.main-nav button{background:none;color:#b3b3ac;padding:33px 0 31px;font-size:14px;font-weight:600;border-bottom:2px solid transparent;line-height:26px}.main-nav button:hover,.main-nav button.active{color:var(--accent)}.main-nav button.active{border-color:var(--accent)}.store-link{display:flex;gap:20px;align-items:center;font-size:13px;font-weight:700;border:1px solid #585c49;border-radius:50px;padding:11px 21px}.store-link:hover{border-color:var(--accent);color:var(--accent)}.menu-toggle{display:none;background:none;color:#fff;padding:8px}.arrow{width:18px;height:18px}.eyebrow{font-size:12px;letter-spacing:2px;font-weight:700;color:var(--accent);text-transform:uppercase;line-height:1.5}.pill{display:inline-flex;align-items:center;justify-content:center;gap:27px;padding:15px 28px;border-radius:50px;background:var(--accent);color:#12160a;font-size:14px;font-weight:700;line-height:24px;transition:background .2s,transform .2s}.pill:hover{background:#adbb4b;transform:translateY(-2px)}.pill.outline{background:transparent;color:#fff;border:1px solid #666c51}.pill.outline:hover{background:#171b0d;border-color:var(--accent)}
+    .hero{padding:39px 0 0}.breadcrumb{display:flex;gap:12px;color:#72766b;font-size:12px;margin-bottom:32px}.breadcrumb span:last-child{color:#b0b0a8}.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:94px;align-items:center}.hero-copy{padding-bottom:32px}.hero h1{font-size:60px;font-weight:750;line-height:1.12;letter-spacing:-2.8px;margin:21px 0 23px}.hero-copy>p{font-size:18px;max-width:435px;line-height:1.8}.hero-copy .pill{margin-top:32px}.hero-note{display:flex;align-items:center;gap:10px;font-size:12px;color:#92968a;margin-top:26px}.hero-note i{width:6px;height:6px;border-radius:50%;background:var(--accent)}.hero-art{position:relative;background:#e7e4da;min-width:0}.hero-art>svg{width:100%;height:auto;aspect-ratio:530 / 580}.art-label{position:absolute;left:27px;top:24px;color:#383c2e;font-size:10px;letter-spacing:1.6px;font-weight:700}.art-label span{display:block;margin-top:2px;font-size:9px;font-weight:400;letter-spacing:.8px}.art-footer{display:flex;justify-content:space-between;align-items:center;padding:14px 1px;color:#92968a;font-size:11px;letter-spacing:.25px;background:#000;position:absolute;top:100%;width:100%}.art-footer span:last-child{color:var(--accent)}
+    .featured{display:grid;grid-template-columns:.95fr 1.2fr;align-items:center;gap:110px;padding-top:140px;padding-bottom:113px}.feature-art{background:#bec1aa;position:relative}.feature-art>svg{width:100%;height:auto;aspect-ratio:480 / 470}.feature-stamp{position:absolute;bottom:23px;left:25px;font-size:10px;letter-spacing:1.4px;font-weight:700;line-height:1.5;color:#343a27}.feature-copy h2{font-size:42px;margin:16px 0 22px;letter-spacing:-1.7px}.feature-copy>p{max-width:480px;font-size:16px;line-height:1.8}.feature-points{margin:23px 0 29px;display:flex;flex-direction:column;max-width:465px}.feature-points div{padding:11px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:600}.feature-points span{font-size:11px;letter-spacing:1px;color:var(--accent);margin-right:20px}.feature-copy .pill{padding:12px 25px}
+    .catalogue{padding:62px 0 90px;border-top:1px solid var(--line);scroll-margin-top:0}.catalogue-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:30px}.catalogue h2{font-size:38px;letter-spacing:-1.4px;margin-top:11px}.catalogue-heading>p{font-size:14px;margin-bottom:4px}.filters{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:19px 0;display:flex;flex-wrap:wrap;align-items:center;gap:17px 30px}.filter-group{display:flex;align-items:center;flex-wrap:wrap;gap:7px}.filter-label{font-size:12px;font-weight:700;color:#a4a69c;margin-right:9px}.filter-button{background:#10120d;border:1px solid #33372a;border-radius:30px;color:#c1c3b8;padding:6px 12px;font-size:12px;line-height:19px;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-width:34px;transition:background .18s,border-color .18s,color .18s}.filter-button:hover{border-color:var(--accent);color:#fff}.filter-button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#10140a}.swatch{width:9px;height:9px;border:1px solid #0002;border-radius:50%;display:inline-block;flex-shrink:0}.filter-button .swatch[data-color="Black"]{border-color:#73756b}.clear-filters{margin-left:auto;background:none;color:#a9ae91;font-size:12px;text-decoration:underline;text-underline-offset:4px;white-space:nowrap;padding:7px 0}.clear-filters:disabled{opacity:.35;cursor:default}.grid-meta{padding:18px 0 20px;display:flex;gap:12px;justify-content:space-between;color:#93968b;font-size:12px}.grid-meta strong{color:#ddd;font-weight:600}.grid-meta .hover-hint{color:#6e7465}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.product-card{position:relative;display:grid;grid-template-columns:105px minmax(0,1fr);align-items:start;gap:21px;background:#fff;color:var(--ink);border-radius:17px;padding:26px 24px 20px;min-height:244px;transition:transform .28s ease,box-shadow .28s ease;isolation:isolate}.product-card:hover,.product-card:focus-within{transform:translateY(-5px);box-shadow:0 10px 30px #9aa74124}.product-art{position:relative;width:105px;height:105px;background:#efeee7;border-radius:50%;overflow:hidden;margin-top:2px}.product-art svg{position:absolute;inset:0;width:100%;height:100%;padding:7px;transition:opacity .35s ease,transform .45s ease}.product-art .alternate{opacity:0;transform:translateX(7px) rotate(5deg)}.product-card:hover .product-art .front,.product-card:focus-within .product-art .front{opacity:0;transform:translateX(-7px) rotate(-5deg)}.product-card:hover .product-art .alternate,.product-card:focus-within .product-art .alternate{opacity:1;transform:none}.product-type{font-size:9px;font-weight:700;letter-spacing:1.2px;color:#808475;text-transform:uppercase;margin:0 0 7px;line-height:1.4}.product-card h3{font-size:17px;letter-spacing:-.45px;line-height:1.3;margin-bottom:8px;font-weight:700}.product-price{font-size:15px;font-weight:700;line-height:1.4;margin-bottom:14px;color:#373e2a;display:flex;align-items:center;flex-wrap:wrap;gap:7px}.product-price del{font-size:12px;font-weight:400;color:#8a8c80}.badge{font-size:9px;font-weight:700;letter-spacing:.3px;border-radius:20px;padding:3px 7px;background:#edf1dc;color:#5b6925;line-height:1.4}.badge.sale{background:#f9efd4;color:#796017}.card-tags{display:flex;gap:4px;flex-wrap:wrap}.tag{font-size:10px;line-height:16px;padding:2px 7px;min-width:24px;border-radius:20px;background:#f0f1eb;color:#656a59;border:1px solid transparent;display:inline-flex;justify-content:center;align-items:center;gap:5px}.tag:hover{border-color:#a3af68;background:#e9edda;color:#303e11}.tag[aria-pressed="true"]{background:#e3e9ca;border-color:#9aa741;color:#3d4818}.color-tags{margin-top:5px}.color-tags .tag{padding:3px 8px}.color-tags .swatch{width:7px;height:7px}.details-button{font-size:11px;font-weight:700;border-top:1px solid #e9ebe1;margin-top:14px;padding:10px 0 0;width:100%;color:#5d6546;background:none;display:flex;align-items:center;justify-content:space-between;text-align:left;gap:10px}.details-button:hover{color:#1c2606}.details-button .arrow{width:14px;height:14px}.empty-state{border:1px dashed #3f4730;padding:55px 25px;text-align:center;grid-column:1/-1;border-radius:17px}.empty-state h3{font-size:23px;letter-spacing:-.6px;margin-bottom:10px}.empty-state p{font-size:15px;margin-bottom:22px}.collection-note{text-align:center;font-size:12px;color:#92968a;margin-top:33px}.collection-note a{color:#b6be93;text-decoration:underline;text-underline-offset:3px}
+    .local-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.local-strip .wrap{display:flex;justify-content:space-between;gap:25px;padding-block:24px}.local-promise{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;color:#c3c6b8}.local-promise svg{width:22px;height:22px;color:var(--accent)}.site-footer{padding:62px 0 0;scroll-margin-top:105px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:85px;padding-bottom:55px}.footer-brand p{font-size:14px;margin-top:19px;max-width:270px;line-height:1.8}.footer-grid h3{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:21px;font-weight:700;color:#c7c9bc}.footer-grid address{font-style:normal;font-size:14px;color:#9b9f91;line-height:1.9}.contact-links{display:flex;flex-direction:column;align-items:flex-start;margin-top:16px;font-size:13px;gap:4px;color:#d0d1c7}.contact-links a:hover{color:var(--accent)}.hours{font-size:13px;color:#9b9f91;margin:0}.hours div{display:flex;justify-content:space-between;gap:20px;margin-bottom:6px}.hours dd{margin:0;color:#cacdc0}.hours div:last-child dd{color:#888d7b}.footer-bottom{padding:20px 0 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font-size:11px;color:#696f61}.footer-bottom a{color:#a3aa92;display:flex;align-items:center;gap:7px}.footer-bottom .arrow{width:13px;height:13px}
+    dialog{border:0;border-radius:22px;background:#fff;color:var(--ink);width:min(710px,calc(100% - 32px));padding:36px;max-height:90vh;overflow:auto;box-shadow:0 25px 80px #0007}dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(5px)}.dialog-close{position:absolute;top:14px;right:14px;background:#eff0e8;border-radius:50%;width:32px;height:32px;display:grid;place-items:center;color:#35392a}.dialog-grid{display:grid;grid-template-columns:.8fr 1fr;gap:28px;align-items:center}.dialog-art{background:#eeeee5;border-radius:14px;padding:14px}.dialog-art svg{width:100%;height:auto;aspect-ratio:280/340}.dialog-copy h2{font-size:28px;letter-spacing:-.9px;margin:8px 0 12px}.dialog-copy p{font-size:14px;line-height:1.7;color:#737769;margin:13px 0}.dialog-copy .product-price{font-size:20px}.dialog-copy label{display:block;font-size:12px;font-weight:700;margin:16px 0 5px}.dialog-copy select{width:100%;border:1px solid #d5d8c9;padding:10px 12px;border-radius:8px;background:white;color:var(--ink);font-size:14px}.dialog-copy .pill{margin-top:18px;width:100%;padding:12px 18px;gap:15px}.dialog-copy .dialog-note{font-size:11px;margin:9px 0 0}.view-angle{font-size:12px;background:none;color:#626c42;text-decoration:underline;text-underline-offset:4px;display:block;margin:10px auto 0}
+    @media(min-width:1600px){.hero-grid{grid-template-columns:1.15fr 1fr;gap:140px}.hero-art>svg{aspect-ratio:530 / 580}.featured{grid-template-columns:480px 1fr;gap:120px}.product-card{grid-template-columns:105px minmax(0,1fr)}}
+    @media(max-width:1100px){.wrap{width:calc(100% - 64px)}.main-nav{gap:22px}.hero-grid{gap:50px}.hero h1{font-size:49px}.hero-copy>p{font-size:16px}.featured{gap:60px;padding-top:110px;padding-bottom:90px}.feature-copy h2{font-size:36px}.product-grid{gap:16px}.product-card{grid-template-columns:80px minmax(0,1fr);gap:14px;padding:22px 18px}.product-art{width:80px;height:80px}.product-card h3{font-size:15px}.footer-grid{gap:45px}.filters{gap:15px 25px}.clear-filters{margin-left:0}}
+    @media(max-width:850px){.brand{font-size:21px}.brand-mark{width:29px}.nav-wrap{gap:15px;min-height:80px}.main-nav{gap:20px}.main-nav button{font-size:12px;padding:26px 0}.store-link{font-size:0;padding:11px;gap:0}.hero{padding-top:25px}.hero-grid{gap:35px;grid-template-columns:1fr 1fr}.hero h1{font-size:42px;letter-spacing:-1.8px}.hero .eyebrow{font-size:10px;letter-spacing:1.2px}.hero-copy{padding-bottom:0}.hero-copy>p{font-size:15px;line-height:1.7}.hero-copy .pill{margin-top:22px;gap:15px;padding:12px 20px;font-size:12px}.hero-note{font-size:10px;margin-top:18px}.hero-art>svg{aspect-ratio:530 / 650;object-fit:cover}.art-label{top:18px;left:18px;font-size:9px}.art-footer{font-size:9px}.featured{gap:40px;padding-top:100px;padding-bottom:75px;grid-template-columns:.95fr 1fr}.feature-art>svg{aspect-ratio:480 / 560}.feature-copy h2{font-size:32px}.feature-copy>p{font-size:14px}.feature-points{margin:17px 0 23px}.feature-points div{font-size:12px;padding:9px 0}.feature-points span{margin-right:12px}.feature-copy .pill{font-size:12px;gap:15px;padding:10px 18px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-card{grid-template-columns:90px minmax(0,1fr);min-height:242px;padding:24px 20px;gap:16px}.product-art{width:90px;height:90px}.catalogue h2{font-size:32px}.catalogue-heading>p{font-size:12px}.catalogue{padding:45px 0 65px}.local-promise{font-size:11px;gap:9px}.local-promise svg{width:18px}.footer-grid{grid-template-columns:1.1fr 1fr;gap:40px}.footer-brand{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand p{margin:0;max-width:285px;font-size:13px}.site-footer{padding-top:40px}}
+    @media(max-width:600px){html{scroll-padding-top:88px}.wrap{width:calc(100% - 40px)}.nav-wrap{min-height:74px;gap:18px}.brand{font-size:22px;gap:9px}.brand-mark{width:30px}.store-link{margin-left:auto}.menu-toggle{display:block}.main-nav{display:none;position:absolute;top:74px;left:0;right:0;background:#080a06;border-bottom:1px solid #353a27;padding:12px 20px;gap:5px;flex-wrap:wrap;justify-content:space-between}.main-nav.open{display:flex}.main-nav button{padding:9px 4px;font-size:12px}.hero{padding-top:23px}.breadcrumb{margin-bottom:25px;font-size:11px}.hero-grid{grid-template-columns:1fr;gap:34px}.hero-copy{padding:0}.hero h1{font-size:46px;line-height:1.1;margin:17px 0 20px;letter-spacing:-2px}.hero .eyebrow{font-size:10px;letter-spacing:1.5px}.hero-copy>p{font-size:16px;line-height:1.75;max-width:340px}.hero-copy .pill{font-size:13px;padding:13px 24px;gap:25px;margin-top:24px}.hero-note{font-size:11px;margin-top:20px}.hero-art>svg{aspect-ratio:530/570}.art-label{top:20px;left:20px;font-size:9px}.art-footer{font-size:10px;padding-top:11px}.featured{grid-template-columns:1fr;padding-top:108px;padding-bottom:65px;gap:33px}.feature-art{order:0}.feature-art>svg{aspect-ratio:480/410}.feature-copy h2{font-size:36px;margin:15px 0 18px}.feature-copy>p{font-size:15px}.feature-points{margin:19px 0 25px}.feature-points div{padding:12px 0;font-size:13px}.feature-copy .pill{font-size:13px;padding:12px 24px}.feature-stamp{font-size:9px;bottom:18px;left:20px}.catalogue{padding-top:42px}.catalogue-heading{display:block;margin-bottom:23px}.catalogue h2{font-size:33px;margin-top:10px}.catalogue-heading>p{font-size:13px;margin-top:12px}.filters{gap:17px;padding:18px 0}.filter-group{gap:6px}.filter-label{width:35px;margin-right:4px}.filter-button{font-size:11px;padding:5px 10px;min-width:32px}.color-group{gap:6px}.color-group .filter-button{padding:5px 8px;font-size:10px;gap:5px}.clear-filters{padding:0;margin-left:45px;font-size:11px}.clear-filters:disabled{display:none}.grid-meta{font-size:11px;padding:17px 0}.grid-meta .hover-hint{display:none}.product-grid{grid-template-columns:1fr;gap:16px}.product-card{grid-template-columns:100px minmax(0,1fr);gap:22px;padding:26px 23px 22px;min-height:240px}.product-art{width:100px;height:100px}.product-card h3{font-size:18px}.product-type{font-size:9px}.tag{font-size:11px;padding:3px 7px}.product-price{font-size:15px}.details-button{font-size:12px}.collection-note{font-size:12px;max-width:290px;margin:25px auto 0}.local-strip .wrap{flex-direction:column;gap:17px;padding-block:25px}.local-promise{font-size:12px}.local-promise svg{width:21px}.footer-grid{grid-template-columns:1fr;gap:33px;padding-bottom:34px}.footer-brand{display:block;grid-column:auto}.footer-brand p{font-size:14px;margin-top:15px;max-width:280px}.footer-grid h3{margin-bottom:15px}.hours{max-width:300px}.footer-bottom{font-size:10px;gap:15px;padding-block:19px}.dialog-grid{grid-template-columns:1fr;gap:23px}dialog{padding:29px 25px}.dialog-art{max-width:190px;margin:auto}.dialog-art svg{max-height:190px}.dialog-copy h2{font-size:26px}.dialog-copy .dialog-note{line-height:1.7}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body id="top">
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="fabric" x1="0" x2="1" y1="0" y2=".3"><stop stop-color="#000" stop-opacity=".17"/><stop offset=".22" stop-color="#fff" stop-opacity=".08"/><stop offset=".48" stop-color="#000" stop-opacity=".035"/><stop offset=".7" stop-color="#fff" stop-opacity=".1"/><stop offset="1" stop-color="#000" stop-opacity=".19"/></linearGradient>
+      <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0eee7"/><stop offset=".6" stop-color="#dedccf"/><stop offset="1" stop-color="#c8c7b8"/></linearGradient>
+      <linearGradient id="fold" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff" stop-opacity=".12"/><stop offset=".8" stop-color="#000" stop-opacity=".01"/><stop offset="1" stop-color="#000" stop-opacity=".2"/></linearGradient>
+      <filter id="shadow" x="-40%" y="-30%" width="190%" height="180%"><feDropShadow dx="8" dy="12" stdDeviation="8" flood-color="#292d1a" flood-opacity=".2"/></filter>
+      <filter id="soft-shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="4" dy="10" stdDeviation="9" flood-color="#252919" flood-opacity=".17"/></filter>
+      <pattern id="weave" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0H4M0 2H4" stroke="#fff" stroke-opacity=".045" stroke-width=".5"/><path d="M0 0V4M2 0V4" stroke="#000" stroke-opacity=".035" stroke-width=".5"/></pattern>
+      <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="arrow-up" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="river-mark" viewBox="0 0 38 36"><path d="M2 10c6-7 11-7 17 0s11 7 17 0M2 20c6-7 11-7 17 0s11 7 17 0M2 30c6-7 11-7 17 0s11 7 17 0" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+      <symbol id="jacket-shape" viewBox="0 0 280 340"><path d="m89 53 25-10 26 10 26-10 25 10 36 23 42 115-36 20-33-70 1 164q-58 14-122 0l1-164-33 70-36-20L53 76Z" fill="currentColor"/><path d="m89 53 25-10 26 10 26-10 25 10 36 23 42 115-36 20-33-70 1 164q-58 14-122 0l1-164-33 70-36-20L53 76Z" fill="url(#fabric)"/><path d="m89 53 25-10 26 10 26-10 25 10 36 23 42 115-36 20-33-70 1 164q-58 14-122 0l1-164-33 70-36-20L53 76Z" fill="url(#weave)"/><g fill="none" stroke="#1e2519" stroke-opacity=".25" stroke-width="1"><path d="m89 56-9 85M191 56l9 85M22 184l27 16M231 200l28-16M86 296q55 9 108 0M60 94l-31 85m190-85 31 85"/><path d="m74 116-8 34m140-34 8 34M91 208l-7 66m106-66 7 66" stroke-opacity=".13" stroke-width="2"/></g></symbol>
+      <symbol id="jacket" viewBox="0 0 280 340"><use href="#jacket-shape"/><path d="m114 43 26 10 26-10-7 31-19 17-19-17Z" fill="#252b21" fill-opacity=".52"/><path d="m112 43-17 17 19 36 25-26-11-10Zm56 0 17 17-19 36-25-26 11-10Z" fill="currentColor" stroke="#27321e" stroke-opacity=".26"/><path d="M139 72v236m8-225v223" stroke="#202916" stroke-opacity=".32" fill="none"/><path d="M87 125h43v55q-22 9-43 0Zm63 0h43v55q-22 9-43 0Z" fill="currentColor" stroke="#28311d" stroke-opacity=".3"/><path d="M87 124h43v13l-22 6-21-6Zm63 0h43v13l-22 6-21-6Z" fill="url(#fold)" stroke="#26311a" stroke-opacity=".25"/><path d="M86 235h42v54H86Zm66 0h41v54h-41Z" fill="currentColor" stroke="#28311d" stroke-opacity=".25"/><path d="M89 239h36m30 0h35" stroke="#d6d4ae" stroke-opacity=".3" stroke-dasharray="2 2"/><g fill="#c3bda1" stroke="#3a3f29" stroke-width=".8"><circle cx="143" cy="104" r="2.5"/><circle cx="143" cy="145" r="2.5"/><circle cx="143" cy="186" r="2.5"/><circle cx="143" cy="227" r="2.5"/><circle cx="143" cy="269" r="2.5"/><circle cx="108" cy="133" r="2"/><circle cx="171" cy="133" r="2"/></g><path d="M117 52h15v7h-15" fill="#ddd5ba"/><path d="M120 55h8" stroke="#6a6b55" stroke-width=".6"/></symbol>
+      <symbol id="jacket-back" viewBox="0 0 280 340"><use href="#jacket-shape"/><path d="m114 43 26 10 26-10 9 23h-70Z" fill="currentColor" stroke="#303723" stroke-opacity=".35"/><path d="M85 98q55 14 110 0M140 111v184" fill="none" stroke="#303723" stroke-opacity=".3"/><path d="m130 112 10 17 10-17" fill="none" stroke="#d2d6b5" stroke-opacity=".25"/></symbol>
+      <symbol id="tee-shape" viewBox="0 0 280 340"><path d="m99 57 17-7q24 17 48 0l17 7 61 32-24 66-40-17 5 163q-45 12-86 0l5-163-40 17-24-66Z" fill="currentColor"/><path d="m99 57 17-7q24 17 48 0l17 7 61 32-24 66-40-17 5 163q-45 12-86 0l5-163-40 17-24-66Z" fill="url(#fabric)"/><path d="m99 57 17-7q24 17 48 0l17 7 61 32-24 66-40-17 5 163q-45 12-86 0l5-163-40 17-24-66Z" fill="url(#weave)"/><g fill="none" stroke="#525242" stroke-opacity=".25"><path d="m97 63 5 75m81-75-5 75M102 293q39 8 76 0M44 90l24 58m170-58-24 58"/><path d="m110 148-6 56m65-22 8 81" stroke-opacity=".14"/></g></symbol>
+      <symbol id="tee" viewBox="0 0 280 340"><use href="#tee-shape"/><path d="M115 52q24 36 50 0" fill="none" stroke="#686655" stroke-opacity=".35" stroke-width="7"/><path d="M117 53q24 30 46 0" fill="none" stroke="currentColor" stroke-width="4"/><path d="M147 113h25v32q-12 7-25 0Z" fill="none" stroke="#555849" stroke-opacity=".3"/><path d="M147 119h25" stroke="#fff" stroke-opacity=".2"/></symbol>
+      <symbol id="tee-back" viewBox="0 0 280 340"><use href="#tee-shape"/><path d="M115 53q24 13 50 0" fill="none" stroke="#686655" stroke-opacity=".35" stroke-width="5"/><path d="M119 54q21 10 42 0" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+      <symbol id="trousers" viewBox="0 0 280 340"><path d="m87 28 107 1 12 112-8 179-55 1-4-178-7 178-54-3 2-174Z" fill="currentColor"/><path d="m87 28 107 1 12 112-8 179-55 1-4-178-7 178-54-3 2-174Z" fill="url(#fabric)"/><path d="m87 28 107 1 12 112-8 179-55 1-4-178-7 178-54-3 2-174Z" fill="url(#weave)"/><g fill="none" stroke="#d8dbc6" stroke-opacity=".22"><path d="M88 43h105M104 44q-2 31-21 46m94-46q3 31 20 43M140 43v72q15 2 15-11V43M84 310l44 2m20 0h44M106 142l-6 166m70-166 2 167"/><path d="M101 28v18m22-18v18m41-18v18m18-18v18" stroke-width="3"/></g><circle cx="145" cy="36" r="2.5" fill="#b9b8a2"/></symbol>
+      <symbol id="trousers-back" viewBox="0 0 280 340"><use href="#trousers"/><path d="M93 65h34v39q-17 8-34 0Zm62 0h34v39q-17 8-34 0Z" fill="currentColor" stroke="#d8dbc6" stroke-opacity=".24"/><path d="M94 71h32m30 0h32" stroke="#d8dbc6" stroke-opacity=".22"/></symbol>
+      <symbol id="sweater" viewBox="0 0 280 340"><path d="m105 53 12-7q24 14 46 0l12 7 45 23 37 190-37 9-32-147 3 173q-53 11-102 0l3-173-32 147-37-9L60 76Z" fill="currentColor"/><path d="m105 53 12-7q24 14 46 0l12 7 45 23 37 190-37 9-32-147 3 173q-53 11-102 0l3-173-32 147-37-9L60 76Z" fill="url(#fabric)"/><path d="M116 51q25 31 49 0" fill="none" stroke="#888775" stroke-opacity=".4" stroke-width="9"/><path d="M117 49q24 25 47 0" fill="none" stroke="currentColor" stroke-width="5"/><g fill="none" stroke="#686b56" stroke-opacity=".18"><path d="M93 106v178m8-184v184m8-188v188m8-192v192m8-193v193m8-194v194m8-194v194m8-194v194m8-194v194m8-192v192m8-187v187m8-182v182m8-178v178"/><path d="m28 252 33 8m157 0 33-8M91 284q49 8 98 0" stroke-width="2"/><path d="m33 257 25 6m164 0 25-6M94 289q47 8 92 0M94 294q47 8 92 0"/></g><path d="M77 86 92 128m111-42-15 42" stroke="#454a32" stroke-opacity=".2" fill="none"/></symbol>
+      <symbol id="sweater-back" viewBox="0 0 280 340"><use href="#sweater"/><path d="M115 46q26 9 50 0l-2 21q-23 10-46-1Z" fill="currentColor"/><path d="M117 50q25 9 46 0" fill="none" stroke="#777d61" stroke-opacity=".35" stroke-width="5"/></symbol>
+      <symbol id="tote" viewBox="0 0 280 340"><path d="M102 122V65c0-52 77-52 77 0v57" fill="none" stroke="#555a35" stroke-opacity=".3" stroke-width="14"/><path d="M102 122V65c0-52 77-52 77 0v57" fill="none" stroke="currentColor" stroke-width="10"/><path d="m57 104 167 2-8 199q-74 23-155 0Z" fill="currentColor"/><path d="m57 104 167 2-8 199q-74 23-155 0Z" fill="url(#fabric)"/><path d="m57 104 167 2-8 199q-74 23-155 0Z" fill="url(#weave)"/><path d="m65 114 151 1-8 181q-68 17-139-1ZM97 109v25h10v-25m67 0v25h10v-25" stroke="#343f24" stroke-opacity=".35" fill="none"/><g fill="none" stroke="#e2e2c5" stroke-width="3.5"><path d="M111 193q14-15 28 0t28 0m-56 13q14-15 28 0t28 0m-56 13q14-15 28 0t28 0"/></g><text x="140" y="250" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#e2e2c5">TWO RIVERS</text></symbol>
+      <symbol id="tote-back" viewBox="0 0 280 340"><use href="#tote"/><path d="M96 173h84v92H96Z" fill="currentColor"/><path d="M96 173h84v92H96Z" fill="url(#fabric)"/><path d="M69 280q55-8 129 13" fill="none" stroke="#465032" stroke-opacity=".2"/></symbol>
+      <symbol id="cap" viewBox="0 0 280 340"><path d="M58 193c-7-139 168-145 169-8l-14 33-154-9Z" fill="currentColor"/><path d="M58 193c-7-139 168-145 169-8l-14 33-154-9Z" fill="url(#fabric)"/><path d="M59 188c46-21 122-12 156 21-19 33-76 64-168 52-38-6-46-22-10-42Z" fill="currentColor"/><path d="M59 188c46-21 122-12 156 21-19 33-76 64-168 52-38-6-46-22-10-42Z" fill="url(#fold)"/><g fill="none" stroke="#cbcbb7" stroke-opacity=".22"><path d="M140 89c-35 9-50 41-49 92m54-91c35 15 48 46 44 101M42 229q81 31 153-15M33 241q73 33 150-16"/></g><ellipse cx="143" cy="87" rx="8" ry="4" fill="currentColor"/><path d="M116 141q9-9 18 0t18 0m-36 8q9-9 18 0t18 0" fill="none" stroke="#d8d9c5" stroke-width="2.5"/></symbol>
+      <symbol id="cap-back" viewBox="0 0 280 340"><path d="M56 209c-4-168 175-168 174 0l-10 29h-51c4-64-59-64-58 0H67Z" fill="currentColor"/><path d="M56 209c-4-168 175-168 174 0l-10 29h-51c4-64-59-64-58 0H67Z" fill="url(#fabric)"/><path d="M93 229h84v10H93Z" fill="currentColor" stroke="#c7c9b2" stroke-opacity=".45"/><path d="M144 91v91m-5-90c-33 14-52 54-52 119m61-119c32 15 52 54 52 119" stroke="#c7c9b2" stroke-opacity=".2" fill="none"/><rect x="145" y="226" width="20" height="16" rx="3" fill="none" stroke="#aaa991" stroke-width="3"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="#top" aria-label="Two Rivers home"><svg class="brand-mark" aria-hidden="true"><use href="#river-mark"/></svg>two rivers</a>
+      <nav class="main-nav" id="main-nav" aria-label="Main departments">
+        <button type="button" class="active" data-department="all" aria-pressed="true">All clothing</button>
+        <button type="button" data-department="women" aria-pressed="false">Women</button>
+        <button type="button" data-department="men" aria-pressed="false">Men</button>
+        <button type="button" data-department="essentials" aria-pressed="false">Essentials</button>
+      </nav>
+      <a class="store-link" href="#visit" aria-label="Find our store">Find our store<svg class="arrow" aria-hidden="true"><use href="#arrow-up"/></svg></a>
+      <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle departments"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="breadcrumb"><a href="#collection">Shop</a><span aria-hidden="true">/</span><span>All clothing</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Good clothes. Close to home.</div>
+          <h1 id="hero-title">For wherever<br>the day goes.</h1>
+          <p>Thoughtfully chosen clothes for slow mornings, busy afternoons, and everything in between.</p>
+          <a href="#collection" class="pill" data-shop-all>Shop the collection<svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a>
+          <div class="hero-note"><i aria-hidden="true"></i>Independent shop. Everyday favorites.</div>
+        </div>
+        <div class="hero-art">
+          <span class="art-label">THE EVERYDAY EDIT<span>Considered pieces. Endless possibilities.</span></span>
+          <svg viewBox="0 0 530 580" role="img" aria-label="Olive chore jacket and natural cotton tee hanging in a sunlit studio">
+            <defs><clipPath id="hero-clip"><rect width="530" height="580"/></clipPath></defs>
+            <g clip-path="url(#hero-clip)">
+              <rect width="530" height="580" fill="url(#wall)"/>
+              <path d="M342 0h188v580H194Z" fill="#f9f7ef" opacity=".34"/>
+              <path d="M477 0h14L345 580h-20Z" fill="#8b8d78" opacity=".09"/>
+              <path d="M0 517h530v63H0Z" fill="#bcbcaf" opacity=".38"/>
+              <path d="M0 517h530" stroke="#959982" stroke-opacity=".17"/>
+              <path d="M-10 112H526" stroke="#666b58" stroke-width="6"/>
+              <path d="M-10 110H526" stroke="#a6a995" stroke-width="2"/>
+              <g filter="url(#shadow)" transform="translate(-17 32) rotate(-8 157 280)">
+                <path d="M154 106V85c0-16 22-17 22-2 0 8-13 9-13 18" stroke="#7d7561" stroke-width="3" fill="none"/>
+                <path d="m163 100-68 52h137Z" fill="none" stroke="#a28d6c" stroke-width="7" stroke-linejoin="round"/>
+                <use href="#tee" x="-2" y="75" width="330" height="400" style="color:#e9e6d8"/>
+              </g>
+              <g filter="url(#shadow)" transform="translate(123 62) rotate(5 155 225)">
+                <path d="M154 69V48c0-16 22-17 22-2 0 8-13 9-13 18" stroke="#655e4d" stroke-width="3" fill="none"/>
+                <path d="m163 63-80 56h160Z" fill="#a18b67" stroke="#8c7759" stroke-width="2" stroke-linejoin="round"/>
+                <path d="m103 111 60-40 57 40" fill="none" stroke="#b5a181" stroke-width="2"/>
+                <use href="#jacket" x="-36" y="46" width="395" height="479" style="color:#747c4f"/>
+              </g>
+              <path d="M421 511h110v16H421Z" fill="#b8a88a"/><path d="M430 527h8v53h-8m75-53h8v53h-8" fill="#a39578"/>
+              <g transform="translate(423 446)"><path d="M0 65h91V19Q41 4 0 19Z" fill="#454c3f"/><path d="M0 19q46-12 91 0v9Q44 16 0 28Z" fill="#58604e"/><path d="M5 59h81" stroke="#91947b" stroke-opacity=".3"/><path d="M48 20v44" stroke="#252c24" stroke-opacity=".3"/></g>
+              <rect width="530" height="580" fill="url(#weave)" opacity=".6"/>
+            </g>
+          </svg>
+          <div class="art-footer"><span>A little less ordinary. A lot more you.</span><span>01 / EVERYDAY</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured wrap" aria-labelledby="feature-title">
+      <div class="feature-art">
+        <svg viewBox="0 0 480 470" role="img" aria-label="Two Rivers canvas tote beside a neatly folded stack of everyday cotton clothes">
+          <rect width="480" height="470" fill="#bec1aa"/><path d="M0 0h300L76 470H0Z" fill="#d7d9c9" opacity=".48"/><path d="M0 383h480v87H0Z" fill="#a6ad90" opacity=".5"/>
+          <ellipse cx="258" cy="371" rx="179" ry="17" fill="#4c5535" opacity=".11"/>
+          <g filter="url(#soft-shadow)" transform="translate(227 61) rotate(9 100 150)"><use href="#tote" width="245" height="297" style="color:#dcd7be"/><g stroke="#69734d" stroke-width="3" fill="none"><path d="M97 168q12-13 24 0t24 0m-48 11q12-13 24 0t24 0m-48 11q12-13 24 0t24 0"/></g><text x="122" y="219" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="700" letter-spacing="2" fill="#69734d">TWO RIVERS</text></g>
+          <g filter="url(#soft-shadow)" transform="translate(46 221) rotate(-5 130 65)">
+            <path d="M3 104q116-20 237 2l-3 42q-118 17-237-1Z" fill="#424a3e"/><path d="M3 104q116-20 237 2l-2 12q-120-22-237 0Z" fill="#535d4c"/><path d="M7 139q115 14 224 1" stroke="#919780" opacity=".35" fill="none"/>
+            <path d="M11 61q110-19 221 3l4 43q-114 19-229 0Z" fill="#e3dece"/><path d="M11 61q106-16 221 3l1 12Q120 57 9 76Z" fill="#f0ebdd"/><path d="M17 100q98 9 211 0" fill="none" stroke="#b6b3a0"/>
+            <path d="M19 21q104-25 209 2l1 40q-105 19-213-1Z" fill="#89906d"/><path d="M19 21q104-25 209 2l-4 12q-100-25-207 1Z" fill="#a0a586"/><path d="M124 14q-11 14-30 15-5-24 30-26 34 2 26 25-15-1-26-14" fill="#626b4c"/><path d="M96 26q25 22 53 0" fill="none" stroke="#b6bda0" stroke-width="4"/><path d="M27 56q102 14 193 0" fill="none" stroke="#5d6947" opacity=".6"/>
+          </g>
+          <rect width="480" height="470" fill="url(#weave)"/>
+        </svg>
+        <span class="feature-stamp">GOOD TOGETHER.<br>EVEN BETTER ON REPEAT.</span>
+      </div>
+      <div class="feature-copy">
+        <div class="eyebrow">The essentials collection</div>
+        <h2 id="feature-title">Meet your<br>new regulars.</h2>
+        <p>The tee you reach for first. The knit you live in. Easy, honest pieces that earn their place in your wardrobe, season after season.</p>
+        <div class="feature-points">
+          <div><span>01</span>Natural textures, all-day comfort</div>
+          <div><span>02</span>Easy fits, without the fuss</div>
+          <div><span>03</span>Made for mixing, matching, repeating</div>
+        </div>
+        <a class="pill outline" href="#collection" data-shop-essentials>Explore the essentials<svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
+    </section>
+
+    <section class="catalogue" id="collection" aria-labelledby="collection-title">
+      <div class="wrap">
+        <div class="catalogue-heading"><div><div class="eyebrow">The clothing collection</div><h2 id="collection-title">Your next go-to.</h2></div><p>Small selection. Plenty to love.</p></div>
+        <div class="filters" aria-label="Filter products">
+          <div class="filter-group" role="group" aria-label="Filter by size"><span class="filter-label">Size</span><button class="filter-button" data-filter="size" data-value="XS" aria-pressed="false">XS</button><button class="filter-button" data-filter="size" data-value="S" aria-pressed="false">S</button><button class="filter-button" data-filter="size" data-value="M" aria-pressed="false">M</button><button class="filter-button" data-filter="size" data-value="L" aria-pressed="false">L</button><button class="filter-button" data-filter="size" data-value="XL" aria-pressed="false">XL</button><button class="filter-button" data-filter="size" data-value="One size" aria-pressed="false">One size</button></div>
+          <div class="filter-group color-group" role="group" aria-label="Filter by color"><span class="filter-label">Color</span><button class="filter-button" data-filter="color" data-value="Olive" aria-pressed="false"><i class="swatch" style="background:#7b8453"></i>Olive</button><button class="filter-button" data-filter="color" data-value="Cream" aria-pressed="false"><i class="swatch" style="background:#e2ddc9"></i>Cream</button><button class="filter-button" data-filter="color" data-value="Black" aria-pressed="false"><i class="swatch" data-color="Black" style="background:#242a26"></i>Black</button><button class="filter-button" data-filter="color" data-value="Blue" aria-pressed="false"><i class="swatch" style="background:#788e9a"></i>Blue</button><button class="filter-button" data-filter="color" data-value="Clay" aria-pressed="false"><i class="swatch" style="background:#ad7c63"></i>Clay</button></div>
+          <button class="clear-filters" id="clear-filters" disabled>Clear filters</button>
+        </div>
+        <div class="grid-meta"><span id="result-count" role="status" aria-live="polite"><strong>9 pieces</strong> &nbsp;/&nbsp; All clothing</span><span class="hover-hint">A closer look? Hover to see the other side.</span></div>
+        <div class="product-grid" id="product-grid"></div>
+        <noscript><p>Please enable JavaScript to browse and filter our collection. You can also call us at (503) 555-0142 for help finding your next favorite.</p></noscript>
+        <p class="collection-note">Not sure about your fit? <a href="#visit">Come say hello.</a> We'll help you find it.</p>
+      </div>
+    </section>
+
+    <div class="local-strip"><div class="wrap">
+      <div class="local-promise"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m3 10 2-6h14l2 6M4 11v10h16V11M3 10c0 4 6 4 6 0 0 4 6 4 6 0 0 4 6 4 6 0M9 21v-7h6v7"/></svg>A real shop, with real people</div>
+      <div class="local-promise"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20 4C6 3 2 8 7 16s14-1 13-12ZM5 21 16 9M8 17l-1-6m5 1h5"/></svg>Considered pieces, not passing trends</div>
+      <div class="local-promise"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20 8a9 9 0 1 0 1 7M20 3v6h-6M8 12l3 3 5-6"/></svg>Easy exchanges within 30 days</div>
+    </div></div>
+  </main>
+
+  <footer class="site-footer wrap" id="visit">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="#top"><svg class="brand-mark" aria-hidden="true"><use href="#river-mark"/></svg>two rivers</a><p>Independent by nature. Local by choice.<br>Good clothes for the life you live.</p></div>
+      <div><h3>Find us in the neighborhood</h3><address>48 River Street<br>Portland, OR 97202</address><div class="contact-links"><a href="tel:+15035550142">(503) 555-0142</a><a href="mailto:hello@tworivers.shop">hello@tworivers.shop</a></div></div>
+      <div><h3>Our door is open</h3><dl class="hours"><div><dt>Tuesday - Friday</dt><dd>11 am - 6 pm</dd></div><div><dt>Saturday</dt><dd>10 am - 5 pm</dd></div><div><dt>Sunday</dt><dd>12 pm - 4 pm</dd></div><div><dt>Monday</dt><dd>Closed</dd></div></dl></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Two Rivers. A little local goes a long way.</span><a href="#top">Back to top<svg class="arrow" aria-hidden="true"><use href="#arrow-up"/></svg></a></div>
+  </footer>
+
+  <dialog id="product-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close product details"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 6 12 12M6 18 18 6"/></svg></button><div id="dialog-content"></div></dialog>
+
+  <script>
+    const colors = {Olive:'#7b8453',Cream:'#e2ddc9',Black:'#303730',Blue:'#788e9a',Clay:'#ad7c63'};
+    const products = [
+      {id:1,name:'Riverside Chore Jacket',type:'Everyday layers',art:'jacket',price:88,color:'Olive',sizes:['S','M','L','XL'],departments:['women','men'],badge:'New',description:'A hard-working layer with a soft, lived-in feel. Cotton twill, roomy pockets, and an easy fit for wherever you end up.'},
+      {id:2,name:'The Everyday Tee',type:'The essentials',art:'tee',price:28,color:'Cream',sizes:['XS','S','M','L','XL'],departments:['women','men','essentials'],description:'The starting point of a good outfit. Soft cotton jersey, a comfortable crew neck, and a just-right relaxed fit.'},
+      {id:3,name:'Easy Day Trousers',type:'An easier fit',art:'trousers',price:64,color:'Black',sizes:['XS','S','M','L'],departments:['women','essentials'],description:'Room to move, with a clean, wide-leg shape. These cotton trousers dress up a little and settle into your everyday easily.'},
+      {id:4,name:'Sunday Cotton Knit',type:'Slow-day favorites',art:'sweater',price:72,color:'Cream',sizes:['S','M','L'],departments:['women','essentials'],badge:'New',description:'A softly textured cotton knit with an easy crew neck. The layer for cool mornings, long walks, and another cup of coffee.'},
+      {id:5,name:'The Pocket Tee',type:'The essentials',art:'tee',price:32,color:'Blue',sizes:['S','M','L','XL'],departments:['men','essentials'],description:'A dependable cotton tee, finished with a small chest pocket. An easy-going shape in a washed, blue-gray shade.'},
+      {id:6,name:'Market Day Tote',type:'Daily carry',art:'tote',price:22,color:'Olive',sizes:['One size'],departments:['women','men','essentials'],description:'For market flowers, library books, and the things you pick up along the way. Durable cotton canvas with comfortable shoulder straps.'},
+      {id:7,name:'Weekend Overshirt',type:'Everyday layers',art:'jacket',price:68,was:85,color:'Clay',sizes:['S','M','L','XL'],departments:['women','men'],badge:'Sale',description:'Wear it buttoned up or open over your favorite tee. A versatile, midweight cotton layer with a warm clay finish and useful patch pockets.'},
+      {id:8,name:'Riverbank Cotton Knit',type:'Slow-day favorites',art:'sweater',price:76,color:'Blue',sizes:['XS','S','M','L'],departments:['men','essentials'],description:'A breathable, textured cotton layer in a quiet river-blue shade. Relaxed through the shoulders and finished with ribbed cuffs.'},
+      {id:9,name:'Neighborhood Cap',type:'The finishing touch',art:'cap',price:24,color:'Black',sizes:['One size'],departments:['women','men'],description:'Your grab-it-on-the-way-out cap. Soft cotton, a curved brim, and an adjustable back strap, with a little Two Rivers signature.'}
+    ];
+    const state = {size:new Set(),color:new Set(),department:'all'};
+    const departmentNames = {all:'All clothing',women:'Women',men:'Men',essentials:'Essentials'};
+    const grid = document.getElementById('product-grid');
+    const resultCount = document.getElementById('result-count');
+    const clearButton = document.getElementById('clear-filters');
+    const dialog = document.getElementById('product-dialog');
+    const nav = document.getElementById('main-nav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const arrow = '<svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg>';
+    function garment(product,back=false,extra='') {
+      return `<svg class="${extra}" viewBox="0 0 280 340" role="img" aria-label="${product.color} ${product.name}, ${back?'back':'front'} view" style="color:${colors[product.color]}"><use href="#${product.art}${back?'-back':''}"/></svg>`;
+    }
+    function tag(group,value) {
+      return `<button class="tag" data-filter="${group}" data-value="${value}" aria-label="Filter by ${group}: ${value}" aria-pressed="${state[group].has(value)}">${group==='color'?`<i class="swatch" style="background:${colors[value]}"></i>`:''}${value}</button>`;
+    }
+    function render() {
+      const visible = products.filter(p => (state.department==='all'||p.departments.includes(state.department)) && (!state.size.size||p.sizes.some(s=>state.size.has(s))) && (!state.color.size||state.color.has(p.color)));
+      const summary = [departmentNames[state.department], ...state.size, ...state.color];
+      resultCount.innerHTML = `<strong>${visible.length} ${visible.length===1?'piece':'pieces'}</strong> &nbsp;/&nbsp; ${summary.join(' / ')}`;
+      grid.innerHTML = visible.map(p=>`<article class="product-card" aria-labelledby="product-${p.id}">
+        <div class="product-art">${garment(p,false,'front')}${garment(p,true,'alternate')}</div>
+        <div class="product-info"><p class="product-type">${p.type}</p><h3 id="product-${p.id}">${p.name}</h3>
+          <div class="product-price">$${p.price}${p.was?`<del>$${p.was}</del>`:''}${p.badge?`<span class="badge ${p.badge==='Sale'?'sale':''}">${p.badge}</span>`:''}</div>
+          <div class="card-tags" aria-label="Available sizes">${p.sizes.map(s=>tag('size',s)).join('')}</div>
+          <div class="card-tags color-tags">${tag('color',p.color)}</div>
+          <button class="details-button" data-product="${p.id}" aria-label="View details for ${p.name}">View details${arrow}</button>
+        </div></article>`).join('') || `<div class="empty-state"><h3>No match, just yet.</h3><p>Try another size or color. Your next favorite is here somewhere.</p><button class="pill" data-reset>See all clothing ${arrow}</button></div>`;
+      document.querySelectorAll('.filters [data-filter]').forEach(button=>button.setAttribute('aria-pressed',state[button.dataset.filter].has(button.dataset.value)));
+      document.querySelectorAll('[data-department]').forEach(button=>{const active=button.dataset.department===state.department;button.classList.toggle('active',active);button.setAttribute('aria-pressed',active)});
+      clearButton.disabled = !state.size.size && !state.color.size && state.department==='all';
+    }
+    function reset(department='all') {
+      state.size.clear();state.color.clear();state.department=department;render();
+    }
+    function closeMenu(){nav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false')}
+    function openProduct(id) {
+      const p = products.find(item=>item.id===id);
+      const selectedSize = p.sizes.find(size=>state.size.has(size)) || p.sizes[0];
+      document.getElementById('dialog-content').innerHTML = `<div class="dialog-grid"><div><div class="dialog-art" id="dialog-art">${garment(p)}</div><button class="view-angle" aria-pressed="false">Show back view</button></div><div class="dialog-copy"><div class="eyebrow">${p.type}</div><h2 id="dialog-title">${p.name}</h2><div class="product-price">$${p.price}${p.was?` <del>$${p.was}</del>`:''}</div><p>${p.description}</p><p><strong>Color:</strong> ${p.color}</p><label for="detail-size">Your size</label><select id="detail-size">${p.sizes.map(s=>`<option${s===selectedSize?' selected':''}>${s}</option>`).join('')}</select><a class="pill" id="ask-item">Ask us about this piece${arrow}</a><p class="dialog-note">Opens your email app. We'll confirm availability and help with the fit.</p></div></div>`;
+      const sizeSelect = document.getElementById('detail-size');
+      const updateMail = ()=>document.getElementById('ask-item').href=`mailto:hello@tworivers.shop?subject=${encodeURIComponent('About the '+p.name)}&body=${encodeURIComponent(`Hello Two Rivers! I'd like to ask about the ${p.name} in ${p.color}, size ${sizeSelect.value}. Is it available in the shop?`)}`;
+      sizeSelect.addEventListener('change',updateMail);updateMail();
+      document.querySelector('.view-angle').addEventListener('click',event=>{const back=event.currentTarget.getAttribute('aria-pressed')!=='true';event.currentTarget.setAttribute('aria-pressed',back);event.currentTarget.textContent=back?'Show front view':'Show back view';document.getElementById('dialog-art').innerHTML=garment(p,back)});
+      dialog.showModal();document.body.style.overflow='hidden';
+    }
+    document.addEventListener('click',event=>{
+      const filter=event.target.closest('[data-filter]');
+      if(filter){
+        const {filter:group,value}=filter.dataset;
+        const wasCard=filter.classList.contains('tag');
+        state[group].has(value)?state[group].delete(value):state[group].add(value);render();
+        if(wasCard){const control=[...document.querySelectorAll('.filters [data-filter]')].find(el=>el.dataset.filter===group&&el.dataset.value===value);control.focus({preventScroll:true});}
+      }
+      const department=event.target.closest('[data-department]');
+      if(department){reset(department.dataset.department);closeMenu();document.getElementById('collection').scrollIntoView({behavior:'smooth'});}
+      if(event.target.closest('[data-shop-essentials]'))reset('essentials');
+      if(event.target.closest('[data-shop-all]'))reset();
+      if(event.target.closest('[data-reset]')){reset();document.querySelector('.filters [data-filter]').focus({preventScroll:true});}
+      const product=event.target.closest('[data-product]');if(product)openProduct(Number(product.dataset.product));
+    });
+    clearButton.addEventListener('click',()=>reset());
+    menuToggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',open)});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
+    document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close()}});
+    dialog.addEventListener('close',()=>{document.body.style.overflow=''});
+    render();
+  </script>
+</body>
+</html>

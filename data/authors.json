@@ -1,0 +1,92 @@
+[
+  {
+    "id": "yuchi-wang",
+    "name": "Yuchi Wang",
+    "url": "https://wangyuchi369.github.io/",
+    "kind": "homepage",
+    "label": "Yuchi Wang — Personal homepage",
+    "verified": true,
+    "note": "Verified name, CUHK affiliation and paper links."
+  },
+  {
+    "id": "rongyao-fang",
+    "name": "Rongyao Fang",
+    "url": "https://rongyaofang.github.io/",
+    "kind": "homepage",
+    "label": "Rongyao Fang — Personal homepage",
+    "verified": true,
+    "note": "Verified Qwen VL team and CUHK research history."
+  },
+  {
+    "id": "weihao-yu",
+    "name": "Weihao Yu",
+    "url": "https://yuyouxixi.github.io/",
+    "kind": "homepage",
+    "label": "Weihao Yu — Personal homepage",
+    "verified": true,
+    "note": "Verified CUHK Ph.D. candidate, visual code agents, Qwen internship since November 2025; distinct from the PKU faculty member of the same English name."
+  },
+  {
+    "id": "xilin-wei",
+    "name": "Xilin Wei",
+    "url": "https://wiselnn570.github.io/",
+    "kind": "homepage",
+    "label": "Xilin Wei — Personal homepage",
+    "verified": true,
+    "note": "Verified Fudan affiliation and video/MLLM publications."
+  },
+  {
+    "id": "tiancheng-gu",
+    "name": "Tiancheng Gu",
+    "url": "https://tiancheng-gu.github.io/",
+    "kind": "homepage",
+    "label": "Tiancheng Gu — Personal homepage",
+    "verified": true,
+    "note": "User-supplied homepage; verified Tiancheng Gu / 顾天承 and University of Sydney affiliation."
+  },
+  {
+    "id": "dingkang-yang",
+    "name": "Dingkang Yang",
+    "url": "https://ydk122024.github.io/",
+    "kind": "homepage",
+    "label": "Dingkang Yang — Personal homepage",
+    "verified": true,
+    "note": "Linked by Yuchi Wang; verified Fudan and CUHK."
+  },
+  {
+    "id": "hang-zhang",
+    "name": "Hang Zhang",
+    "url": "https://scholar.google.com/citations?hl=en&user=kMpV724AAAAJ",
+    "kind": "scholar-profile",
+    "label": "Hang Zhang — Google Scholar profile (author mapping to confirm)",
+    "verified": false,
+    "note": "User-supplied Scholar URL assigned provisionally to the remaining author without a confirmed profile, Hang Zhang. The profile could not be fetched because the connection timed out; author mapping remains for user review."
+  },
+  {
+    "id": "dayiheng-liu",
+    "name": "Dayiheng Liu",
+    "url": "https://liudayiheng.github.io/",
+    "kind": "homepage",
+    "label": "Dayiheng Liu — Personal homepage",
+    "verified": true,
+    "note": "Verified Alibaba and Qwen publications."
+  },
+  {
+    "id": "hongsheng-li",
+    "name": "Hongsheng Li",
+    "url": "https://www.ee.cuhk.edu.hk/~hsli/",
+    "kind": "homepage",
+    "label": "Hongsheng Li — Personal homepage",
+    "verified": true,
+    "note": "Linked by Yuchi Wang and Rongyao Fang; verified CUHK faculty page."
+  },
+  {
+    "id": "shuai-bai",
+    "name": "Shuai Bai",
+    "url": "https://shuaibai623.github.io/",
+    "kind": "homepage",
+    "label": "Shuai Bai — Personal homepage",
+    "verified": true,
+    "note": "User-supplied homepage; its page title identifies Shuai Bai / 白帅, lead of Qwen-VL and Visual Intelligence."
+  }
+]
