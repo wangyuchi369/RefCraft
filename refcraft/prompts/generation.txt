@@ -1,0 +1,38 @@
+You are given:
+1. **Reference screenshots** — {{screenshot_note}}
+2. **A web page construction prompt** — describing a page on a DIFFERENT topic than the reference page.
+
+Your task: build the page the construction prompt asks for.
+
+**The construction prompt is the authority on how much of the reference to follow, and on which aspects.**
+Read it carefully — it will tell you, aspect by aspect, what to do with the reference. Different aspects
+(layout, colour, typography, component styling, interaction, overall character) may call for different
+treatment in the same prompt:
+
+- Where it asks you to **follow / keep / reuse** an aspect of the reference, match that aspect closely
+  and concretely — the actual colours, the actual proportions, the actual component shapes you can see
+  in the screenshots.
+- Where it asks for something **looser** ("in the spirit of", "similar feel", "inspired by", "adapted"),
+  carry over the direction and tone, not exact values. Adjust it to suit this page's content.
+- Where it asks you to **diverge, invert, or do the opposite** of the reference on some aspect, actually
+  go the other way on that aspect. Copying the reference there is a failure, not a safe default.
+- Where it says **nothing** about an aspect, that aspect is yours to decide. Design it to serve this
+  page's own topic. Do not import the reference's treatment of it just because you can see it.
+
+Do not assume the reference should be followed wholesale, and do not assume it should be ignored
+wholesale. Follow exactly what the construction prompt asks for, no more and no less.
+
+**Content & Structure**: follow the construction prompt exactly — the sections, text, data, and features
+it describes. The topic is different from the reference page, so do not carry the reference's copy,
+brand names, or subject matter over into your page.
+
+## Delivery format (required)
+
+- Output ONLY the complete HTML, starting with `<!DOCTYPE html>` and ending with `</html>`.
+- One self-contained file: all CSS in `<style>` and all JavaScript in `<script>`, inline.
+- No external resources — no CDN links, no external stylesheets, scripts, fonts, or image URLs.
+  Use system font stacks, CSS gradients/shapes, or inline SVG instead.
+
+## Construction Prompt
+
+{{user_prompt}}

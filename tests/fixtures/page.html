@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>RefCraft evaluator smoke fixture</title>
+<style>body{font:18px system-ui;margin:24px;max-width:100%;background:#fff;color:#111}button,input{font:inherit;padding:12px;max-width:90%}</style>
+<h1>Browser smoke fixture</h1><p>This is a synthetic infrastructure test, not a benchmark answer.</p>
+<label>Name <input id="name" required></label><button id="submit">Save</button><p id="result" aria-live="polite">Waiting</p>
+<script>document.querySelector('#submit').onclick=()=>{document.querySelector('#result').textContent=document.querySelector('#name').value?'Saved: '+document.querySelector('#name').value:'Name required';};</script>
+</html>

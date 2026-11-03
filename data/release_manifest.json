@@ -1,0 +1,78 @@
+{
+  "name": "RefCraft",
+  "tasks": 300,
+  "website": "https://wangyuchi369.github.io/refcraft/",
+  "paper": "https://arxiv.org/abs/2610.26826",
+  "files": {
+    ".gitattributes": {
+      "sha256": "b4ffa2d89c273cda238016d371fb08c8e1dbc59b184a9829ddd659726ad5e661",
+      "bytes": 176
+    },
+    "BUNDLE_SHA256SUMS": {
+      "sha256": "45e2b4550cae19a6890edf085a8f6635b4565fe0e8899a87fdb11edffd3f0b70",
+      "bytes": 198
+    },
+    "CITATION.cff": {
+      "sha256": "53d22bac1b5a8aab5e7405d4c0100ec38899819388a8bc49ae3a3d14d4115dfe",
+      "bytes": 1545
+    },
+    "LICENSE.md": {
+      "sha256": "59f448f4c1e2f9e08b15b94973ef7bfef70b1a83e3862835674e5b3af90d0fd7",
+      "bytes": 956
+    },
+    "README.md": {
+      "sha256": "92f157d376b052a26ba4f9cb51ef7127ba0e1dd6fd851bc2bf8f023db6eef8a3",
+      "bytes": 4412
+    },
+    "assets/refcraft-mascot.png": {
+      "sha256": "40988b8fe128d563a418afe497d6e8dc01f68de1387ca162ca59368125bf8e9d",
+      "bytes": 169763
+    },
+    "assets/teaser.webp": {
+      "sha256": "46702ac6578afa042549e85cb1e4d25a443d6b14dd6bff06ef40c249d56408be",
+      "bytes": 894384
+    },
+    "bundles/refcraft-evaluation.tar.gz": {
+      "sha256": "55899351096b41eb82c171b3882aaad5783fca91261541b52d7424f5c5636cda",
+      "bytes": 4869511
+    },
+    "bundles/refcraft-inputs.tar.gz": {
+      "sha256": "54234519bdd759366f4bea9694e9f1fb8dc82d55e76b6d0b90666359511aef45",
+      "bytes": 1512274812
+    },
+    "data/attribution.json": {
+      "sha256": "22156e2f053b8f3484b36de763e6cfe024a600667fb5792b5b9ecd201d7c6cce",
+      "bytes": 408665
+    },
+    "data/manifest.json": {
+      "sha256": "c9d6fb9b6f2ada4f908b034656c79e4e21ad35cfe6407fb9dbe959a3bd4dc5b2",
+      "bytes": 374101
+    },
+    "data/task_id_map.csv": {
+      "sha256": "ddcd3af96a3174fb0d89e8cbf5d51e508c1e61d769e0aaa26f7a68954c79f68a",
+      "bytes": 4972
+    },
+    "docs/attribution.md": {
+      "sha256": "c79063b8f4076f89d3c5df329c286cc3bde51dee3d76ec2cc16d7d0a8a26c16b",
+      "bytes": 18149
+    },
+    "refcraft.bib": {
+      "sha256": "f7aadcc55c814ee5353f879566d64d8aa5391ca5d27b345917d95c2868eb8bda",
+      "bytes": 414
+    },
+    "reference_frames.jsonl": {
+      "sha256": "3eeded8d28a9744b4abd87f98b93e0f026dd3b9aa0e00fda0a9051d866a96c99",
+      "bytes": 669777
+    },
+    "tables/keypoints.parquet": {
+      "sha256": "1d10640c463cd9725a21d56e26ed465a03667eb5b322d24df57df7a76f3e5a49",
+      "bytes": 2562228
+    },
+    "tables/tasks.parquet": {
+      "sha256": "4bb6e925299c58c6fffd965f8af8b8939e5efbea7a138c30f7e8ebfe20d79bfe",
+      "bytes": 160852188
+    }
+  },
+  "github": "https://github.com/wangyuchi369/RefCraft",
+  "huggingface": "https://huggingface.co/datasets/YuchiWang/RefCraft"
+}

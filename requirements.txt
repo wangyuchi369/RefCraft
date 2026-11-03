@@ -1,0 +1,5 @@
+# Python 3.10+; install Chromium separately with python -m playwright install chromium
+playwright>=1.48,<2
+Pillow>=10,<13
+numpy>=1.24,<3
+requests>=2.31,<3
