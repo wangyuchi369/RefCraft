@@ -3,7 +3,7 @@
 <p align="center"><strong>Benchmarking Visual-Reference-Conditioned Agentic Generation<br>through Web Development</strong></p>
 <p align="center">
   <a href="https://arxiv.org/abs/2610.26826">Paper</a> ·
-  <a href="https://wangyuchi369.github.io/refcraft/">Project website</a> ·
+  <a href="https://wangyuchi369.github.io/RefCraft/">Project website</a> ·
   <a href="https://huggingface.co/datasets/YuchiWang/RefCraft">Dataset</a> ·
   <a href="#evaluate">Evaluation</a>
 </p>
